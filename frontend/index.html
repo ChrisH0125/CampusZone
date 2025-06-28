@@ -1,13 +1,199 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Safety - Live Preview</title>
+    
+    <!-- 1. Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 2. React, ReactDOM, and Babel from CDN -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <!-- 3. Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- 4. Custom CSS Styles -->
+    <style>
+        :root {
+          --primary-dark-blue: #2A4D54; 
+          --accent-teal: #49AB97;       
+          --background-cream: #F5F1E8; 
+          --primary-white: #ffffff;
+          --text-dark: #1F2937;
+        }
+        body {
+          font-family: 'Inter', sans-serif;
+          background-color: var(--primary-dark-blue);
+        }
+        .btn-primary {
+          background-color: var(--accent-teal);
+          color: var(--primary-white);
+          padding: 12px 28px;
+          border-radius: 8px;
+          font-weight: 700;
+          transition: all 0.3s ease;
+          border: none;
+          cursor: pointer;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          display: inline-block;
+        }
+        .btn-primary:hover {
+          background-color: #3E8B7A; /* Darker teal */
+          transform: translateY(-2px);
+          box-shadow: 0 4px 20px rgba(73, 171, 151, 0.3);
+        }
+        .btn-secondary {
+          background-color: transparent;
+          color: var(--accent-teal);
+          padding: 10px 26px; /* slightly smaller padding */
+          border-radius: 8px;
+          font-weight: 700;
+          transition: all 0.3s ease;
+          border: 2px solid var(--accent-teal);
+          cursor: pointer;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          display: inline-block;
+        }
+        .btn-secondary:hover {
+          background-color: var(--accent-teal);
+          color: var(--primary-white);
+        }
+        .nav-link {
+          color: #D1D5DB; /* Lighter gray for better contrast */
+          font-weight: 500;
+          text-transform: uppercase;
+          font-size: 0.875rem;
+          letter-spacing: 1px;
+          transition: color 0.3s ease;
+          position: relative;
+          padding-bottom: 4px;
+        }
+        .nav-link:hover {
+          color: var(--primary-white);
+        }
+    </style>
+</head>
+<body>
+
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+
+    <script type="text/babel">
+        const { useState } = React;
+
+        // --- Reusable Logo Component ---
+        const Logo = () => (
+            <div className="flex items-center space-x-3">
+                {/* Note: In a real project, use an <img> tag with an imported src */}
+                <img src="https://raw.githubusercontent.com/user-attachments/assets/ad0e62cc-839e-4cc7-9557-8d3946a3d831" alt="Campus Safety Logo" className="w-10 h-10" />
+                <span className="text-white text-xl font-bold tracking-wider uppercase">Campus Safety</span>
+            </div>
+        );
+
+        // --- Navigation Bar Component ---
+        const Navigation = () => {
+            const [isOpen, setIsOpen] = useState(false);
+            const navLinks = ["Dashboard", "Compare", "Trends", "About"];
+
+            return (
+                <header className="absolute top-0 left-0 right-0 z-50">
+                    <nav className="container mx-auto px-6 py-5">
+                        <div className="flex items-center justify-between">
+                            <a href="/"><Logo /></a>
+                            <div className="hidden md:flex items-center space-x-8">
+                                {navLinks.map((link) => (
+                                    <a key={link} href={`#${link.toLowerCase()}`} className="nav-link">
+                                        {link}
+                                    </a>
+                                ))}
+                                 <a href="#login" className="bg-white text-sm text-gray-800 font-bold py-2 px-5 rounded-lg hover:bg-gray-200 transition-colors">
+                                    Sign In
+                                </a>
+                            </div>
+                            <div className="md:hidden">
+                                <button onClick={() => setIsOpen(!isOpen)} className="text-white focus:outline-none">
+                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                         {isOpen && (
+                            <div className="md:hidden mt-4 p-4 rounded-lg" style={{backgroundColor: 'var(--primary-dark-blue)'}}>
+                                {navLinks.map((link) => (
+                                     <a key={link} href={`#${link.toLowerCase()}`} className="block text-white text-center py-2 text-sm hover:bg-white/10 rounded">
+                                        {link}
+                                    </a>
+                                ))}
+                                 <a href="#login" className="block text-center bg-white text-sm text-gray-800 font-bold py-2 px-5 rounded-lg hover:bg-gray-200 transition-colors mt-4">
+                                    Sign In
+                                </a>
+                            </div>
+                        )}
+                    </nav>
+                </header>
+            );
+        };
+
+        // --- The Main Landing Page Component ---
+        const Landing = () => {
+            const backgroundStyle = {
+                position: 'relative',
+                backgroundColor: 'var(--primary-dark-blue)',
+                overflow: 'hidden',
+            };
+
+            const BackgroundShapes = () => (
+                <div className="absolute top-0 left-0 w-full h-full z-0" aria-hidden="true">
+                    <div className="absolute top-0 -left-1/4 w-96 h-96 bg-accent-teal/10 rounded-full filter blur-3xl opacity-50"></div>
+                    <div className="absolute bottom-0 -right-1/4 w-96 h-96 bg-accent-teal/10 rounded-full filter blur-3xl opacity-50"></div>
+                </div>
+            );
+
+            return (
+                <div style={backgroundStyle}>
+                    <Navigation />
+                    <main className="relative container mx-auto px-6 z-10">
+                        <div className="flex flex-col md:flex-row items-center min-h-screen pt-32 md:pt-20">
+                            <div className="md:w-1/2 text-center md:text-left">
+                                <h1 className="text-5xl lg:text-7xl font-extrabold text-white leading-tight">
+                                    Campus Safety,
+                                    <span className="block" style={{color: 'var(--accent-teal)'}}>Done Different.</span>
+                                </h1>
+                                <p className="max-w-md mx-auto md:mx-0 mt-6 mb-10 text-lg text-white/70">
+                                   Transforming the future of campus security. Join our platform and experience a new way to stay informed and protected.
+                                </p>
+                                <div className="space-x-4">
+                                    <a href="#dashboard" className="btn-primary">Try Demo</a>
+                                    <a href="#about" className="btn-secondary">Learn More</a>
+                                </div>
+                            </div>
+                            <div className="md:w-1/2 mt-12 md:mt-0 flex justify-center items-center">
+                                 <div className="relative w-full max-w-md">
+                                    <div className="absolute -inset-2 bg-gradient-to-r from-teal-400 to-blue-500 rounded-full blur-xl opacity-50 animate-pulse"></div>
+                                    <div className="relative p-8 bg-primary-dark-blue/50 border-2 border-white/10 backdrop-blur-md rounded-full flex items-center justify-center">
+                                        <img src="https://raw.githubusercontent.com/user-attachments/assets/ad0e62cc-839e-4cc7-9557-8d3946a3d831" alt="Campus Safety Logo" className="w-48 h-48 md:w-64 md:h-64" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                    <BackgroundShapes />
+                </div>
+            );
+        };
+
+        const container = document.getElementById('root');
+        const root = ReactDOM.createRoot(container);
+        root.render(<Landing />);
+
+    </script>
+</body>
 </html>

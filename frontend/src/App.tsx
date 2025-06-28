@@ -1,33 +1,28 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Landing from './pages/Landing';
-import Dashboard from './pages/Dashboard';
-import Compare from './pages/Compare';
-import Trends from './pages/Trends';
-import About from './pages/About';
-import Sponsors from './pages/Sponsors';
-import NotFound from './pages/NotFound';
-import './styles/index.css';
+// Import your other pages here
+// import Dashboard from './pages/Dashboard'; 
+// import Compare from './pages/Compare';
+// import Trends from './pages/Trends';
+// import About from './pages/About';
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-50">
-        <Navigation />
-        <main className="pt-20">
-          <Routes>
-            <Route path="/" element={<Landing />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/compare" element={<Compare />} />
-            <Route path="/trends" element={<Trends />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/sponsors" element={<Sponsors />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </main>
-      </div>
+      {/* The Navigation component is placed here so it appears on every page */}
+      <Navigation />
+      
+      {/* The Routes component will switch between your pages */}
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        {/* <Route path="/dashboard" element={<Dashboard />} /> */}
+        {/* <Route path="/compare" element={<Compare />} /> */}
+        {/* <Route path="/trends" element={<Trends />} /> */}
+        {/* <Route path="/about" element={<About />} /> */}
+      </Routes>
     </Router>
   );
 }
 
-export default App
+export default App;
