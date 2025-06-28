@@ -8,7 +8,6 @@ from spotcrime_client import SpotCrimeClient
 from danger_score import danger_scores  # (or: from danger_score import get_location_scores)
 from danger_score import get_danger_scores_by_hour
 from ml.danger_forecast import forecast_danger_by_hour
-import os
 # PDF export imports
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
