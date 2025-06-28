@@ -1,1 +1,1 @@
-import psycopg2
+# database initialization
