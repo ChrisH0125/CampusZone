@@ -1,11 +1,15 @@
-# Flask: lightweight web framework for building APIs
+blinker==1.9.0
+certifi==2025.6.15
+charset-normalizer==3.4.2
+click==8.2.1
 Flask==2.3.2
-
-# Requests: to make HTTP calls to Gemini API
-requests==2.31.0
-
-# Python-dotenv: for loading environment variables (like API keys) from .env file
+Flask-Cors==4.0.0
+idna==3.10
+itsdangerous==2.2.0
+Jinja2==3.1.6
+MarkupSafe==3.0.2
+psycopg2-binary==2.9.10
 python-dotenv==1.0.1
-
-# Flask-Cors: to allow frontend (React or other) to connect to backend during local dev
-flask-cors==4.0.0
+requests==2.31.0
+urllib3==2.5.0
+Werkzeug==3.1.3
