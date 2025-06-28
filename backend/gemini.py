@@ -21,6 +21,12 @@ def get_forecast_summary(data):
         }
     }
 
-    response = requests.post(url, headers=headers, params=params, json=body)
-    response.raise_for_status()
-    return response.json()["candidates"][0]["content"]["parts"][0]["text"]
+
+    try:
+        response = requests.post(url, headers=headers, params=params, json=body)
+        response.raise_for_status()
+        return response.json()["candidates"][0]["content"]["parts"][0]["text"]
+    except requests.exceptions.RequestException as e:
+        print("❌ Gemini API Error:", e)
+        print("🔎 Response Text:", response.text if 'response' in locals() else "No response.")
+        raise
