@@ -7,6 +7,7 @@ from gemini import get_forecast_summary
 from spotcrime_client import SpotCrimeClient
 from danger_score import danger_scores  # (or: from danger_score import get_location_scores)
 from danger_score import get_danger_scores_by_hour
+from ml.danger_forecast import forecast_danger_by_hour
 
 # PDF export imports
 from reportlab.lib.pagesizes import letter
@@ -95,6 +96,23 @@ def api_danger_score_by_hour():
         return jsonify({"error": "Missing location"}), 400
     result = get_danger_scores_by_hour(location)
     return jsonify(result)
+
+@app.route("/api/danger-forecast", methods=["POST"])
+def api_danger_forecast():
+    location = request.json.get("location")
+    if not location:
+        return jsonify({"error": "Missing location"}), 400
+    result = forecast_danger_by_hour(location)
+    if "error" in result:
+        return jsonify(result), 404
+    return jsonify({"forecast": result})
+
+@app.route("/api/locations", methods=["GET"])
+def get_locations():
+    import pandas as pd
+    df = pd.read_csv("campus_crimes.csv")
+    locations = df["location"].dropna().unique().tolist()
+    return jsonify({"locations": locations})
 
 if __name__ == "__main__":
     app.run(debug=True)
