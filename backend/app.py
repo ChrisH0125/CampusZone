@@ -6,6 +6,7 @@ from flask_cors import CORS
 from gemini import get_forecast_summary
 from spotcrime_client import SpotCrimeClient
 from danger_score import danger_scores  # (or: from danger_score import get_location_scores)
+from danger_score import get_danger_scores_by_hour
 
 # PDF export imports
 from reportlab.lib.pagesizes import letter
@@ -86,6 +87,14 @@ def export_pdf():
         as_attachment=True,
         download_name="campuszone_report.pdf"
     )
+
+@app.route("/api/danger-score-by-hour", methods=["POST"])
+def api_danger_score_by_hour():
+    location = request.json.get("location")
+    if not location:
+        return jsonify({"error": "Missing location"}), 400
+    result = get_danger_scores_by_hour(location)
+    return jsonify(result)
 
 if __name__ == "__main__":
     app.run(debug=True)

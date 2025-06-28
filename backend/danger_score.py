@@ -1,5 +1,3 @@
-# danger_score.py
-
 import pandas as pd
 
 # Load data
@@ -33,6 +31,24 @@ def reload_scores(filepath="campus_crimes.csv"):
     df = load_data(filepath)
     danger_scores = compute_danger_scores(df)
 
-# Example usage (uncomment to test directly)
+# Danger score by hour for a location
+def get_danger_scores_by_hour(location, csv_path="campus_crimes.csv"):
+    df = pd.read_csv(csv_path)
+    location_col = "location" if "location" in df.columns else "address"
+    df = df[df[location_col].str.lower() == location.lower()]
+
+    if df.empty:
+        return {"hours": [], "danger_score": {}}
+
+    if "hour" not in df.columns:
+        df["hour"] = pd.to_datetime(df["timestamp"]).dt.hour  # use timestamp here
+
+    danger_by_hour = df.groupby("hour").size().to_dict()
+    max_value = max(danger_by_hour.values(), default=0)
+    peak_hours = [int(hr) for hr, val in danger_by_hour.items() if val == max_value]
+    return {"hours": peak_hours, "danger_score": {str(hr): val for hr, val in danger_by_hour.items()}}
+
+# Example usage
 # if __name__ == "__main__":
 #     print(danger_scores)
+#     print(get_danger_scores_by_hour("Library"))
