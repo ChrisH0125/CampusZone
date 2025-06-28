@@ -24,6 +24,7 @@ Respond:
 - Which day was riskier overall?
 - Mention any location patterns
 - End with a recommendation like \"If choosing between the two days, Friday appears safer.\"
+- Put these responses in a bulleted format
 """
 
 personalized_greeting_prompt = """
