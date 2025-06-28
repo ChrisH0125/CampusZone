@@ -1,4 +1,7 @@
 from flask import Flask, request, jsonify, send_file
+from reportlab.pdfgen import canvas
+from reportlab.lib.pagesizes import letter
+from io import BytesIO
 from flask_cors import CORS
 from gemini import get_forecast_summary
 from spotcrime_client import SpotCrimeClient
@@ -24,35 +27,51 @@ def home():
 def get_all():
   return incidents.get_all_incidents()
 
-
+# test gemini
 @app.route("/api/test-gemini", methods=["POST"])
 def test_gemini():
-    data = request.json.get("data", "")
+    data = request.json.get("data") if request.is_json else None
+    if not data:
+        return jsonify({"error": "Missing 'data' in request."}), 400
+
     try:
         result = get_forecast_summary(data)
         return jsonify({"result": result})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-
+    
+# Get UCF Crimes
 @app.route("/api/ucf-crimes", methods=["GET"])
 def get_ucf_crimes():
-    client = SpotCrimeClient()
-    crimes = client.get_ucf_crimes()
-    return jsonify([crime.__dict__ for crime in crimes])
+    try:
+        client = SpotCrimeClient()
+        crimes = client.get_ucf_crimes()
+        return jsonify([crime.__dict__ for crime in crimes])
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 # 🚨 Danger Score endpoint:
 @app.route("/api/danger-score", methods=["POST"])
 def api_danger_score():
-    location = request.json.get("location")
+    data = request.get_json()
+    location = data.get("location") if data else None
     if not location:
-        return jsonify({"error": "Missing location"}), 400
-    scores = danger_scores.get(location, {})
+        return jsonify({"error": "Missing 'location' in request."}), 400
+
+    scores = danger_scores.get(location)
+    if scores is None:
+        return jsonify({"error": f"No data found for location: {location}"}), 404
+
     return jsonify({"danger_score": scores})
 
 # 🚀 PDF Export endpoint:
 @app.route("/api/export-pdf", methods=["POST"])
 def export_pdf():
-    content = request.json.get("summary") or request.json.get("data") or "No summary provided."
+    data = request.get_json()
+    summary = data.get("summary") if data else None
+
+    if not summary:
+        return jsonify({"error": "Missing 'summary' in request."}), 400
 
     buffer = BytesIO()
     p = canvas.Canvas(buffer, pagesize=letter)
@@ -62,7 +81,7 @@ def export_pdf():
     text_obj.setFont("Helvetica", 12)
 
     # Handle multi-line text
-    for line in content.split('\n'):
+    for line in summary.split('\n'):
         text_obj.textLine(line)
     p.drawText(text_obj)
     p.showPage()
