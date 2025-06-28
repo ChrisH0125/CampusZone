@@ -1,6 +1,6 @@
 .PHONY: freeze
 freeze:
-	source pip freeze > requirements.txt
+	pip freeze > requirements.txt
 
 .PHONY: db-up
 db-up:
@@ -11,6 +11,6 @@ db-down:
 	docker compose -f database/docker-compose.yml down
 
 .PHONY: install-req
-freeze:
-	source pip install -r requirements.txt
+install-req:
+	pip install -r requirements.txt
 
