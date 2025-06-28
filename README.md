@@ -49,6 +49,8 @@ We built a tool that lets students:
     .env
     README.md
 
+[📖 Full API Documentation →](./API.md)
+
 ## 🔗 Live Demo
 
 [Coming Soon]
