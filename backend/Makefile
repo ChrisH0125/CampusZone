@@ -10,3 +10,7 @@ db-up:
 db-down:
 	docker compose -f database/docker-compose.yml down
 
+.PHONY: install-req
+freeze:
+	source pip install -r requirements.txt
+
