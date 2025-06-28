@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Campus Safety - Live Preview</title>
+    <title>CampusZone</title>
 
     <!-- Tailwind CSS from CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -16,6 +16,7 @@
       rel="stylesheet"
     />
 
+<link rel="icon" type="image/png" href="images/Logo.png" />
     <!-- Custom CSS Styles -->
     <style>
       :root {
@@ -44,14 +45,14 @@
         text-decoration: none;
       }
       .btn-primary:hover {
-        background-color: #3e8b7a; /* Darker teal */
+        background-color: #3e8b7a;
         transform: translateY(-2px);
         box-shadow: 0 4px 20px rgba(73, 171, 151, 0.3);
       }
       .btn-secondary {
         background-color: transparent;
         color: var(--accent-teal);
-        padding: 10px 26px; /* slightly smaller padding */
+        padding: 10px 26px;
         border-radius: 8px;
         font-weight: 700;
         transition: all 0.3s ease;
@@ -67,7 +68,7 @@
         color: var(--primary-white);
       }
       .nav-link {
-        color: #d1d5db; /* Lighter gray for better contrast */
+        color: #d1d5db;
         font-weight: 500;
         text-transform: uppercase;
         font-size: 0.875rem;
@@ -120,8 +121,8 @@
             </a>
             <!-- Desktop Navigation Links -->
             <div class="flex items-center space-x-8">
-              <a href="#dashboard" class="nav-link">Dashboard</a>
-              <a href="#about" class="nav-link">About</a>
+              <a href="/dashboard" class="nav-link">Dashboard</a>
+              <a href="/about" class="nav-link">About</a>
               <a
                 href="#login"
                 class="bg-white text-sm text-gray-800 font-bold py-2 px-5 rounded-lg hover:bg-gray-200 transition-colors text-decoration-none"
@@ -133,71 +134,64 @@
       </header>
 
       <!-- Hero Section -->
-      <main class="relative container mx-auto px-6 z-10">
-        <div class="flex items-center min-h-screen pt-32">
-          <div class="w-1/2 text-left">
-            <h1
-              class="text-5xl lg:text-7xl font-extrabold text-white leading-tight"
-            >
-              Campus Safety,
-              <span class="block" style="color: var(--accent-teal)"
-                >Done Different.</span
-              >
-            </h1>
-            <p class="max-w-md mt-6 mb-10 text-lg text-white/70">
-              Transforming the future of campus security. Join our platform and
-              experience a new way to stay informed and protected.
+      <main class="relative container mx-auto px-6 z-10 pt-32">
+        <div class="flex flex-col md:flex-row gap-10 mb-20">
+          <!-- Mission -->
+          <section class="md:w-2/3">
+            <h2 class="text-4xl font-extrabold mb-6" style="color: var(--accent-teal)">Our Mission</h2>
+            <p class="mb-4 text-lg text-white/90">
+              At CampusZone, we believe every campus deserves a safer tomorrow. Our mission is to empower students and staff with real-time safety insights and predictive tools, making campuses more secure and connected.
             </p>
-            <div class="space-x-4">
-              <a href="#dashboard" class="btn-primary">Try Demo</a>
-              <a href="#about" class="btn-secondary">Learn More</a>
-            </div>
-          </div>
-          <div class="w-1/2 flex justify-center items-center">
-            <div class="relative w-full max-w-md">
-              <div
-                class="absolute -inset-2 bg-gradient-to-r from-teal-400 to-blue-500 rounded-full blur-xl opacity-50 animate-pulse"
-              ></div>
-              <div
-                class="relative p-8 bg-primary-dark-blue/50 border-2 border-white/10 backdrop-blur-md rounded-full flex items-center justify-center"
-              >
-                <img
-                  src="https://raw.githubusercontent.com/user-attachments/assets/ad0e62cc-839e-4cc7-9557-8d3946a3d831"
-                  alt="Campus Safety Logo"
-                  class="w-48 h-48 lg:w-64 lg:h-64"
-                />
-              </div>
-            </div>
-          </div>
+            <p class="mb-4 text-lg text-white/90">
+              We’re committed to transparency, innovation, and accessibility—helping communities stay informed and prepared for whatever comes their way.
+            </p>
+          </section>
+          <!-- Problem Card -->
+          <aside class="md:w-1/3">
+        <div class="bg-[#254146] rounded-xl shadow-lg p-6">
+            <h3 class="text-2xl font-bold mb-2" style="color: var(--accent-teal)">The Challenge</h3>
+            <p class="text-white/80">
+            Many campuses lack accessible, up-to-date safety information. Existing solutions are often fragmented, costly, or hard to use.
+            <br /><br />
+            Our motivation is deeply personal—recent campus tragedies, such as the FSU shooting, remind us how critical it is to keep students informed and protected.
+            <br /><br />
+            CampusZone bridges this gap with a unified, user-friendly platform for everyone.
+            </p>
         </div>
-      </main>
+        </aside>
+        </div>
 
-      <!-- Subscription Section -->
-      <section class="py-20" style="background-color: var(--background-cream)">
-        <div class="container mx-auto px-6 text-center">
-          <h2
-            class="text-3xl font-bold mb-2"
-            style="color: var(--primary-dark-blue)"
-          >
-            Join Our Safety Network
-          </h2>
-          <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
-            Get weekly crime reports and safety alerts delivered directly to
-            your inbox. Stay ahead, stay safe.
-          </p>
-          <form class="flex gap-3 max-w-lg mx-auto">
-            <input
-              type="email"
-              placeholder="your.email@example.com"
-              class="flex-grow w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-teal"
-              required
-            />
-            <button type="submit" class="btn-primary flex-shrink-0">
-              Subscribe
-            </button>
-          </form>
-        </div>
-      </section>
+        <!-- Meet Our Team Section -->
+        <section class="py-16">
+          <h2 class="text-3xl font-extrabold text-center mb-12" style="color: var(--accent-teal)">Meet Our Team</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 justify-items-center">
+            <!-- Team Member 1 -->
+            <div class="flex flex-col items-center">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Team Member" class="w-32 h-32 rounded-full object-cover border-4 border-[#49ab97] mb-4 shadow-lg" />
+              <div class="text-lg font-bold">Alex Kim</div>
+              <div class="text-[#49ab97] font-medium">Co-Founder</div>
+            </div>
+            <!-- Team Member 2 -->
+            <div class="flex flex-col items-center">
+              <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="Team Member" class="w-32 h-32 rounded-full object-cover border-4 border-[#49ab97] mb-4 shadow-lg" />
+              <div class="text-lg font-bold">Jordan Lee</div>
+              <div class="text-[#49ab97] font-medium">Lead Developer</div>
+            </div>
+            <!-- Team Member 3 -->
+            <div class="flex flex-col items-center">
+              <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Team Member" class="w-32 h-32 rounded-full object-cover border-4 border-[#49ab97] mb-4 shadow-lg" />
+              <div class="text-lg font-bold">Morgan Patel</div>
+              <div class="text-[#49ab97] font-medium">Product Designer</div>
+            </div>
+            <!-- Team Member 4 -->
+            <div class="flex flex-col items-center">
+              <img src="https://randomuser.me/api/portraits/women/85.jpg" alt="Team Member" class="w-32 h-32 rounded-full object-cover border-4 border-[#49ab97] mb-4 shadow-lg" />
+              <div class="text-lg font-bold">Taylor Smith</div>
+              <div class="text-[#49ab97] font-medium">Community Lead</div>
+            </div>
+          </div>
+        </section>
+      </main>
 
       <!-- Footer -->
       <footer
@@ -336,4 +330,3 @@
     </div>
   </body>
 </html>
-

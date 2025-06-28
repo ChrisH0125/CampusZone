@@ -8,7 +8,7 @@ from spotcrime_client import SpotCrimeClient
 from danger_score import danger_scores  # (or: from danger_score import get_location_scores)
 from danger_score import get_danger_scores_by_hour
 from ml.danger_forecast import forecast_danger_by_hour
-
+import os
 # PDF export imports
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
@@ -18,11 +18,21 @@ from io import BytesIO
 from database import incidents
 
 app = Flask(__name__)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CORS(app)
 
 @app.route("/")
 def home():
-    return send_file("test.html")
+    return send_file(os.path.join(BASE_DIR, "pages", "home.html"))
+
+@app.route("/dashboard")
+def dash():
+    return send_file(os.path.join(BASE_DIR, "pages", "map.html"))
+
+@app.route("/about")
+def about():
+    return send_file(os.path.join(BASE_DIR, "pages", "about.html"))
+
 
 # database routes
 @app.route("/incidents/all", methods=["GET"])
