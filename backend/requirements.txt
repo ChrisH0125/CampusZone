@@ -1,26 +1,118 @@
-# Flask: lightweight web framework for building APIs
+aiofiles==24.1.0
+aiohappyeyeballs==2.6.1
+aiohttp==3.12.11
+aiosignal==1.3.2
+alembic==1.15.2
+anaconda-anon-usage @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_835778cmg1/croot/anaconda-anon-usage_1743190150273/work
+annotated-types @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/annotated-types_1728588668736/work
+archspec @ file:///croot/archspec_1709217642129/work
+attrs==25.3.0
+bcrypt==4.3.0
+blinker==1.9.0
+boltons @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_0a8f8rf2dq/croot/boltons_1737061714423/work
+Brotli @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_f7i0oxypt6/croot/brotli-split_1736182464088/work
+certifi @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_50bk79gkw_/croot/certifi_1745939223061/work/certifi
+cffi @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_e4xd9yd9i2/croot/cffi_1736182819442/work
+charset-normalizer==3.4.2
+click==8.2.0
+click-plugins==1.1.1
+cligj==0.7.2
+conda @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_f7tjb4b3kt/croot/conda_1743715301936/work/conda-src
+conda-anaconda-telemetry @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_9cczaegl9x/croot/conda-anaconda-telemetry_1744662554568/work
+conda-anaconda-tos @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_08c_a7hm7s/croot/conda-anaconda-tos_1744823880434/work
+conda-content-trust @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/conda-content-trust_1728603284288/work
+conda-libmamba-solver @ file:///croot/conda-libmamba-solver_1745607008911/work/src
+conda-package-handling @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_82jv6q9ech/croot/conda-package-handling_1731369032774/work
+conda_package_streaming @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_2el5nlypud/croot/conda-package-streaming_1731366187356/work
+contourpy==1.3.2
+cryptography @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_fdxcx92j10/croot/cryptography_1740577852661/work
+cssselect2==0.8.0
+cycler==0.12.1
+distro @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/distro_1728591855492/work
+dotenv==0.9.9
+et_xmlfile==2.0.0
+fiona==1.10.1
 Flask==2.3.2
-
-# Requests: to make HTTP calls to Gemini API
-requests==2.31.0
-
-# Python-dotenv: for loading environment variables (like API keys) from .env file
-python-dotenv==1.0.1
-
-# Flask-Cors: to allow frontend (React or other) to connect to backend during local dev
-flask-cors==4.0.0
-
-# Connect to postgres database
-psycopg2-binary==2.9.10
-
-# Pandas
-six==1.17.0
-tzdata==2025.2
-pytz==2025.2
-python-dateutil==2.9.0.post0
+Flask-Cors==4.0.0
+Flask-Migrate==4.1.0
+Flask-SQLAlchemy==3.1.1
+fonttools==4.58.2
+frozendict @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/frozendict_1728605521897/work
+frozenlist==1.6.2
+geographiclib==2.0
+geopandas==0.14.3
+geopy==2.3.0
+gunicorn==23.0.0
+idna==3.10
+itsdangerous==2.2.0
+Jinja2==3.1.6
+joblib==1.5.1
+jsonpatch @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/jsonpatch_1728594556110/work
+jsonpointer==2.1
+kiwisolver==1.4.8
+libmambapy @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_8fxbc14zt9/croot/mamba-split_1734469521691/work/libmambapy
+Mako==1.3.10
+markdown-it-py @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/markdown-it-py_1728586321899/work
+MarkupSafe==3.0.2
+matplotlib==3.10.3
+mdurl @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/mdurl_1728585992209/work
+menuinst @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_66is8p984e/croot/menuinst_1738943433761/work
+multidict==6.4.4
 numpy==2.3.1
+openpyxl==3.1.5
+orjson==3.10.18
+packaging==25.0
 pandas==2.3.0
-
-# Reportlab
-reportlab==4.4.2
+patsy==1.0.1
 pillow==11.2.1
+platformdirs @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_4euggz8v1n/croot/platformdirs_1744273055841/work
+pluggy @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_bei6q1cvvt/croot/pluggy_1733169621717/work
+probableparsing==0.0.1
+propcache==0.3.1
+psycopg2-binary==2.9.10
+pycosat @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_61k1o_oje7/croot/pycosat_1736868429741/work
+pycparser @ file:///tmp/build/80754af9/pycparser_1636541352034/work
+pydantic @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_4blmh3bau_/croot/pydantic_1734736077970/work
+pydantic_core @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_bdqco4zmod/croot/pydantic-core_1734726070262/work
+pydyf==0.11.0
+Pygments @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_f0f10r98sf/croot/pygments_1744664126614/work
+pyogrio==0.11.0
+pyparsing==3.2.3
+pyphen==0.17.2
+pyproj==3.7.1
+PySocks @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/pysocks_1728586068722/work
+python-crfsuite==0.9.11
+python-dateutil==2.9.0.post0
+python-dotenv==1.0.1
+pytz==2025.2
+reportlab==4.4.2
+requests==2.31.0
+rich @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_034myiu7pr/croot/rich_1732638981241/work
+ruamel.yaml @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_beoui95smx/croot/ruamel.yaml_1745960312720/work
+ruamel.yaml.clib @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_d9xusw0yil/croot/ruamel.yaml.clib_1745937162586/work
+scikit-learn==1.7.0
+scipy==1.16.0
+setuptools==78.1.1
+shapely==2.0.3
+six==1.17.0
+SQLAlchemy==2.0.41
+statsmodels==0.14.4
+tabulate==0.9.0
+threadpoolctl==3.6.0
+tinycss2==1.4.0
+tinyhtml5==2.0.0
+tqdm @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_5642tzrprr/croot/tqdm_1738943467095/work
+truststore @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_a1qa3ogm4o/croot/truststore_1736550138575/work
+typing_extensions==4.13.2
+tzdata==2025.2
+urllib3==2.4.0
+usaddress==0.5.14
+uvloop==0.21.0
+weasyprint==65.1
+webencodings==0.5.1
+Werkzeug==3.1.3
+wheel==0.45.1
+XlsxWriter==3.2.3
+yarl==1.20.0
+zopfli==0.2.3.post1
+zstandard @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_a5_i6g4o6n/croot/zstandard_1731356352787/work
