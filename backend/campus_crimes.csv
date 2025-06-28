@@ -1,9 +1,42 @@
-location,timestamp,type
-Library,2024-06-25 21:00:00,Theft
-Library,2024-06-25 22:00:00,Assault
-Library,2024-06-25 21:00:00,Theft
-Gym,2024-06-24 19:00:00,Harassment
-Gym,2024-06-24 19:00:00,Theft
-Gym,2024-06-24 20:00:00,Theft
-Dorm A,2024-06-23 22:00:00,Assault
-Dorm A,2024-06-23 20:00:00,Theft
+location,type,timestamp
+Library,Theft,2025-06-25T12:00:00Z
+Library,Theft,2025-06-25T13:00:00Z
+Library,Theft,2025-06-24T17:00:00Z
+Library,Theft,2025-06-23T18:00:00Z
+Library,Harassment,2025-06-21T21:00:00Z
+Library,Harassment,2025-06-22T22:00:00Z
+Gym,Assault,2025-06-25T20:00:00Z
+Gym,Theft,2025-06-24T21:00:00Z
+Gym,Theft,2025-06-20T15:00:00Z
+Dorm A,Assault,2025-06-20T01:00:00Z
+Dorm A,Harassment,2025-06-20T03:00:00Z
+Dorm A,Theft,2025-06-23T12:00:00Z
+Dorm A,Theft,2025-06-21T11:00:00Z
+Dining Hall,Theft,2025-06-21T12:00:00Z
+Dining Hall,Theft,2025-06-24T19:00:00Z
+Dining Hall,Assault,2025-06-22T19:00:00Z
+Dining Hall,Theft,2025-06-19T08:00:00Z
+Dorm B,Assault,2025-06-19T02:00:00Z
+Dorm B,Theft,2025-06-23T15:00:00Z
+Dorm B,Theft,2025-06-23T16:00:00Z
+Student Union,Theft,2025-06-25T11:00:00Z
+Student Union,Theft,2025-06-21T13:00:00Z
+Student Union,Harassment,2025-06-21T17:00:00Z
+Student Union,Theft,2025-06-20T10:00:00Z
+Parking Lot,Theft,2025-06-22T23:00:00Z
+Parking Lot,Theft,2025-06-23T20:00:00Z
+Parking Lot,Assault,2025-06-20T21:00:00Z
+Parking Lot,Harassment,2025-06-25T22:00:00Z
+Quad,Theft,2025-06-24T13:00:00Z
+Quad,Assault,2025-06-24T23:00:00Z
+Quad,Harassment,2025-06-24T09:00:00Z
+Quad,Theft,2025-06-21T18:00:00Z
+Library,Assault,2025-06-21T15:00:00Z
+Gym,Theft,2025-06-22T13:00:00Z
+Gym,Theft,2025-06-20T11:00:00Z
+Dorm A,Theft,2025-06-20T08:00:00Z
+Dining Hall,Assault,2025-06-19T19:00:00Z
+Dorm B,Harassment,2025-06-19T06:00:00Z
+Student Union,Theft,2025-06-23T14:00:00Z
+Parking Lot,Theft,2025-06-19T20:00:00Z
+Quad,Theft,2025-06-22T16:00:00Z
