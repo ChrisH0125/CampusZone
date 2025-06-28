@@ -5,8 +5,7 @@ from io import BytesIO
 import pandas as pd
 from flask_cors import CORS
 from gemini import get_forecast_summary
-from spotcrime_client import SpotCrimeClient
-from danger_score import danger_scores
+from danger_score import danger_scores  # (or: from danger_score import get_location_scores)
 import os
 from danger_score import get_danger_scores_by_hour
 
@@ -19,7 +18,7 @@ from reportlab.pdfgen import canvas
 from io import BytesIO
 
 # functions
-from database import incidents
+from database import incidents, update_database
 
 app = Flask(__name__)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -47,6 +46,10 @@ def get_all():
     return incidents.get_all_incidents()
 
 
+@app.route("/incidents/update", methods=["GET"])
+def update():
+  return update_database.update_data()
+
 # test gemini
 @app.route("/api/test-gemini", methods=["POST"])
 def test_gemini():
@@ -59,6 +62,8 @@ def test_gemini():
         return jsonify({"result": result})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+<<<<<<< HEAD
+=======
 
 
 # Get UCF Crimes
@@ -70,6 +75,7 @@ def get_ucf_crimes():
         return jsonify([crime.__dict__ for crime in crimes])
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+>>>>>>> main
 
 
 # 🚨 Danger Score endpoint:

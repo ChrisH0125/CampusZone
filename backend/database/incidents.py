@@ -1,11 +1,5 @@
 from . import db
 
-# -5 for EST
-# TIMESTAMP '2004-10-19 10:23:54-05'
-
-def insert_incident():
-  return "insert"
-
 def get_all_incidents():
   con = db.get_db_connection()
   cur = con.cursor()
