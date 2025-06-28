@@ -6,9 +6,8 @@ import pandas as pd
 from flask_cors import CORS
 from gemini import get_forecast_summary
 from spotcrime_client import SpotCrimeClient
-from danger_score import (
-    danger_scores,
-)  # (or: from danger_score import get_location_scores)
+from danger_score import danger_scores
+import os
 from danger_score import get_danger_scores_by_hour
 
 from danger_forecast import forecast_danger_by_hour
@@ -29,16 +28,12 @@ CORS(app)
 
 @app.route("/")
 def home():
-    return send_file(os.path.join(BASE_DIR, "pages", "home.html"))
+    return send_file("home.html")
 
-@app.route("/dashboard")
-def dash():
-    return send_file(os.path.join(BASE_DIR, "pages", "map.html"))
 
 @app.route("/about")
 def about():
-    return send_file(os.path.join(BASE_DIR, "pages", "about.html"))
-
+    return render_template("about.html")
 
 
 @app.route("/dashboard")
@@ -153,6 +148,8 @@ def get_locations():
     df = pd.read_csv("campus_crimes.csv")
     locations = df["location"].dropna().unique().tolist()
     return jsonify({"locations": locations})
+
+
 @app.route("/api/clean-data", methods=["GET"])
 def clean_data():
     try:
@@ -165,6 +162,7 @@ def clean_data():
         return jsonify({"data": data})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
 
 @app.route("/api/gemini-summary", methods=["POST"])
 def gemini_summary():
@@ -197,7 +195,8 @@ def gemini_summary():
         return jsonify({"summary": gemini_output})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-    
+
+
 @app.route("/api/compare-days", methods=["POST"])
 def compare_days():
     """
@@ -214,17 +213,23 @@ def compare_days():
     # Use your CSV or DataFrame here!
     try:
         import pandas as pd
+
         df = pd.read_csv("campus_crimes.csv")
-        df['datetime'] = pd.to_datetime(df['timestamp'] if 'timestamp' in df.columns else df['datetime'])
+        df["datetime"] = pd.to_datetime(
+            df["timestamp"] if "timestamp" in df.columns else df["datetime"]
+        )
 
         def filter_by(day=None, date_range=None):
             if day:
-                mask = df['datetime'].dt.date == pd.to_datetime(day).date()
+                mask = df["datetime"].dt.date == pd.to_datetime(day).date()
             elif date_range:
-                start, end = pd.to_datetime(date_range[0]), pd.to_datetime(date_range[1])
-                mask = (df['datetime'] >= start) & (df['datetime'] <= end)
+                start, end = (
+                    pd.to_datetime(date_range[0]),
+                    pd.to_datetime(date_range[1]),
+                )
+                mask = (df["datetime"] >= start) & (df["datetime"] <= end)
             else:
-                mask = pd.Series([False]*len(df))
+                mask = pd.Series([False] * len(df))
             return df[mask]
 
         incidents_a = filter_by(day_a, range_a).to_dict(orient="records")
@@ -232,23 +237,22 @@ def compare_days():
 
         # Gemini summary (reuse your helper)
         from gemini import get_forecast_summary
+
         # Construct a prompt or data string for comparison (tune as needed)
         summary_input = {
             "incidents_a": incidents_a,
             "incidents_b": incidents_b,
             "label_a": day_a or range_a,
-            "label_b": day_b or range_b
+            "label_b": day_b or range_b,
         }
         # The Gemini function might need tweaking if it only takes one set at a time!
         # For demo, just concatenate descriptions.
-        prompt = f"""Compare two days/ranges for campus safety:\n\nA ({summary_input['label_a']}): {len(incidents_a)} incidents.\nB ({summary_input['label_b']}): {len(incidents_b)} incidents.\n\nSummarize which period seems riskier, why, and note any patterns."""
+        prompt = f"""Compare two days/ranges for campus safety:\n\nA ({summary_input["label_a"]}): {len(incidents_a)} incidents.\nB ({summary_input["label_b"]}): {len(incidents_b)} incidents.\n\nSummarize which period seems riskier, why, and note any patterns."""
         summary = get_forecast_summary(prompt)
 
-        return jsonify({
-            "incidents_a": incidents_a,
-            "incidents_b": incidents_b,
-            "summary": summary
-        })
+        return jsonify(
+            {"incidents_a": incidents_a, "incidents_b": incidents_b, "summary": summary}
+        )
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
