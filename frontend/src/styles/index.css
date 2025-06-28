@@ -1,0 +1,248 @@
+@import 'leaflet/dist/leaflet.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Color Palette Variables */
+:root {
+  --primary-teal: #49ab97;
+  --primary-dark: #1c374d;
+  --primary-black: #000000;
+  --accent-yellow: #f1a208;
+  --primary-white: #ffffff;
+  --light-teal: #e8f5f3;
+  --lighter-teal: #b8e0d9;
+}
+
+/* Global styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--primary-white);
+  min-height: 100vh;
+  color: var(--primary-black);
+}
+
+/* Leaflet styles */
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid var(--primary-teal);
+  box-shadow: 0 4px 12px rgba(28, 55, 77, 0.15);
+}
+
+/* Fix Leaflet marker icons */
+.leaflet-default-icon-path {
+  background-image: url('https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon.png');
+}
+
+.leaflet-marker-icon {
+  background-image: url('https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon.png') !important;
+}
+
+.leaflet-marker-shadow {
+  background-image: url('https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png') !important;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+/* Cards */
+.card-enhanced {
+  background: var(--light-teal);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(28, 55, 77, 0.15);
+  transition: all 0.3s ease;
+  border: 2px solid var(--primary-teal);
+}
+
+.card-enhanced:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(28, 55, 77, 0.25);
+  background: var(--lighter-teal);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--primary-teal);
+  color: var(--primary-white);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(28, 55, 77, 0.3);
+}
+
+.btn-secondary {
+  background-color: var(--primary-white);
+  color: var(--primary-teal);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  transition: all 0.3s ease;
+  border: 2px solid var(--primary-teal);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-teal);
+  color: var(--primary-white);
+  transform: translateY(-2px);
+}
+
+.btn-accent {
+  background-color: var(--accent-yellow);
+  color: var(--primary-black);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-accent:hover {
+  background-color: #d89207;
+  transform: translateY(-2px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-teal);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--primary-dark);
+}
+
+.text-primary {
+  color: var(--primary-teal);
+}
+
+.text-dark {
+  color: var(--primary-dark);
+}
+
+.text-accent {
+  color: var(--accent-yellow);
+}
+
+/* Loading spinner */
+.spinner {
+  border: 4px solid rgba(73, 171, 151, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid var(--primary-teal);
+  width: 32px;
+  height: 32px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Status indicators */
+.status-safe {
+  background-color: var(--primary-teal);
+  color: var(--primary-white);
+}
+
+.status-moderate {
+  background-color: var(--accent-yellow);
+  color: var(--primary-black);
+}
+
+.status-danger {
+  background-color: #dc2626;
+  color: var(--primary-white);
+}
+
+/* Navigation styles */
+.nav-link {
+  color: var(--primary-white);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--accent-yellow);
+}
+
+.nav-link.active {
+  color: var(--accent-yellow);
+  font-weight: 700;
+}
