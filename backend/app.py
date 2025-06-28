@@ -62,21 +62,6 @@ def test_gemini():
         return jsonify({"result": result})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-<<<<<<< HEAD
-=======
-
-
-# Get UCF Crimes
-@app.route("/api/ucf-crimes", methods=["GET"])
-def get_ucf_crimes():
-    try:
-        client = SpotCrimeClient()
-        crimes = client.get_ucf_crimes()
-        return jsonify([crime.__dict__ for crime in crimes])
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
->>>>>>> main
-
 
 # 🚨 Danger Score endpoint:
 @app.route("/api/danger-score", methods=["POST"])
