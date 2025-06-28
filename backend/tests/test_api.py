@@ -2,30 +2,28 @@ import requests
 
 BASE_URL = "http://127.0.0.1:5000"
 
-def test_ucf_crimes():
-    resp = requests.get(f"{BASE_URL}/api/ucf-crimes")
-    assert resp.status_code == 200
-    assert isinstance(resp.json(), list)
-    print("✅ /api/ucf-crimes passed!")
+def test_home():
+    response = requests.get(f"{BASE_URL}/")
+    assert response.status_code == 200
 
 def test_danger_score():
-    resp = requests.post(f"{BASE_URL}/api/danger-score", json={"location": "Library"})
-    assert resp.status_code == 200
-    assert "danger_score" in resp.json()
-    print("✅ /api/danger-score passed!")
+    payload = {"location": "Library"}
+    response = requests.post(f"{BASE_URL}/api/danger-score", json=payload)
+    assert response.status_code == 200
+    assert "danger_score" in response.json()
 
-def test_export_pdf():
-    resp = requests.post(
-        f"{BASE_URL}/api/export-pdf",
-        json={"summary": "PDF test summary"}
-    )
-    assert resp.status_code == 200
-    # Response should be PDF bytes
-    content_type = resp.headers.get("Content-Type", "")
-    assert "application/pdf" in content_type
-    print("✅ /api/export-pdf passed!")
+def test_gemini_summary():
+    payload = {
+        "data": [
+            {"location": "Library", "type": "Theft", "timestamp": "2025-06-25T12:00:00Z"},
+        ]
+    }
+    response = requests.post(f"{BASE_URL}/api/gemini-summary", json=payload)
+    assert response.status_code == 200
+    assert "summary" in response.json()
 
-if __name__ == "__main__":
-    test_ucf_crimes()
-    test_danger_score()
-    test_export_pdf()
+def test_compare_days_empty():
+    payload = {"day_a": "2025-06-01", "day_b": "2025-06-02"}
+    response = requests.post(f"{BASE_URL}/api/compare-days", json=payload)
+    assert response.status_code == 200
+    assert "summary" in response.json()
