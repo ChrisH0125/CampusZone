@@ -1,10 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import './styles/index.css'
-import 'leaflet/dist/leaflet.css'
+import "./styles/index.css";
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+// Add the "!" at the end of the line below
+const rootElement = document.getElementById('root')! 
+
+ReactDOM.createRoot(rootElement).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,

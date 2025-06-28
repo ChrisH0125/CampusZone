@@ -1,0 +1,9 @@
+location,timestamp,type
+Library,2024-06-25 21:00:00,Theft
+Library,2024-06-25 22:00:00,Assault
+Library,2024-06-25 21:00:00,Theft
+Gym,2024-06-24 19:00:00,Harassment
+Gym,2024-06-24 19:00:00,Theft
+Gym,2024-06-24 20:00:00,Theft
+Dorm A,2024-06-23 22:00:00,Assault
+Dorm A,2024-06-23 20:00:00,Theft
