@@ -1,4 +1,6 @@
 import requests
+if not GEMINI_API_KEY:
+    raise EnvironmentError("Missing GEMINI_API_KEY. Please check your .env file.")
 from config import GEMINI_API_KEY
 from prompts import forecast_summary_prompt
 
