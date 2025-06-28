@@ -4,7 +4,6 @@ from reportlab.lib.pagesizes import letter
 from io import BytesIO
 from flask_cors import CORS
 from gemini import get_forecast_summary
-from spotcrime_client import SpotCrimeClient
 from danger_score import danger_scores  # (or: from danger_score import get_location_scores)
 from danger_score import get_danger_scores_by_hour
 
@@ -14,7 +13,7 @@ from reportlab.pdfgen import canvas
 from io import BytesIO
 
 # functions
-from database import incidents
+from database import incidents, update_database
 
 app = Flask(__name__)
 CORS(app)
@@ -28,6 +27,10 @@ def home():
 def get_all():
   return incidents.get_all_incidents()
 
+@app.route("/incidents/update", methods=["GET"])
+def update():
+  return update_database.update_data()
+
 # test gemini
 @app.route("/api/test-gemini", methods=["POST"])
 def test_gemini():
@@ -38,16 +41,6 @@ def test_gemini():
     try:
         result = get_forecast_summary(data)
         return jsonify({"result": result})
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
-    
-# Get UCF Crimes
-@app.route("/api/ucf-crimes", methods=["GET"])
-def get_ucf_crimes():
-    try:
-        client = SpotCrimeClient()
-        crimes = client.get_ucf_crimes()
-        return jsonify([crime.__dict__ for crime in crimes])
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
