@@ -12,3 +12,15 @@ flask-cors==4.0.0
 
 # Connect to postgres database
 psycopg2-binary==2.9.10
+
+# Pandas
+six==1.17.0
+tzdata==2025.2
+pytz==2025.2
+python-dateutil==2.9.0.post0
+numpy==2.3.1
+pandas==2.3.0
+
+# Reportlab
+reportlab==4.4.2
+pillow==11.2.1

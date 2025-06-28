@@ -13,6 +13,9 @@ from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 from io import BytesIO
 
+# functions
+from database import incidents
+
 app = Flask(__name__)
 CORS(app)
 
@@ -20,7 +23,12 @@ CORS(app)
 def home():
     return send_file("test.html")
 
-# Test Gemini
+# database routes
+@app.route("/incidents/all", methods=["GET"])
+def get_all():
+  return incidents.get_all_incidents()
+
+# test gemini
 @app.route("/api/test-gemini", methods=["POST"])
 def test_gemini():
     data = request.json.get("data") if request.is_json else None
