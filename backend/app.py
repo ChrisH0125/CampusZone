@@ -11,7 +11,7 @@ from danger_score import get_danger_scores_by_hour
 
 from danger_forecast import forecast_danger_by_hour
 from ml.forecast_prophet import forecast_incidents
-from backend.hot_zones import find_hot_zones
+from hot_zones import find_hot_zones
 from ml.risk_classifier import is_hour_risky
 
 
