@@ -27,3 +27,30 @@ def test_compare_days_empty():
     response = requests.post(f"{BASE_URL}/api/compare-days", json=payload)
     assert response.status_code == 200
     assert "summary" in response.json()
+
+def test_forecast_prophet():
+    payload = {"location": "Library", "days": 7}
+    response = requests.post(f"{BASE_URL}/api/forecast-prophet", json=payload)
+    assert response.status_code == 200
+    data = response.json()
+    assert "forecast" in data
+    assert isinstance(data["forecast"], list)
+
+def test_hot_zones():
+    response = requests.get(f"{BASE_URL}/api/hot-zones")
+    assert response.status_code == 200
+    data = response.json()
+    assert "hot_zones" in data
+    assert isinstance(data["hot_zones"], list)
+    # Each hot zone should have lat and lng
+    if data["hot_zones"]:
+        assert "lat" in data["hot_zones"][0]
+        assert "lng" in data["hot_zones"][0]
+
+def test_risk_predict():
+    payload = {"location": "Library", "hour": 14}
+    response = requests.post(f"{BASE_URL}/api/risk-predict", json=payload)
+    assert response.status_code == 200
+    data = response.json()
+    assert "risky" in data
+    assert isinstance(data["risky"], bool)

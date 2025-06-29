@@ -9,6 +9,9 @@ from spotcrime_client import SpotCrimeClient
 from danger_score import danger_scores  # (or: from danger_score import get_location_scores)
 from danger_score import get_danger_scores_by_hour
 from danger_forecast import forecast_danger_by_hour
+from ml.forecast_prophet import forecast_incidents
+from backend.hot_zones import find_hot_zones
+from ml.risk_classifier import is_hour_risky
 
 # PDF export imports
 from reportlab.lib.pagesizes import letter
@@ -214,6 +217,42 @@ def compare_days():
         })
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+    
+@app.route("/api/forecast-prophet", methods=["POST"])
+def api_forecast_prophet():
+    location = request.json.get("location")
+    days = int(request.json.get("days", 7))
+    if not location:
+        return jsonify({"error": "Missing location"}), 400
+    try:
+        forecast = forecast_incidents(location, days)
+        result = [
+            {
+                "date": row["ds"].strftime("%Y-%m-%d"),
+                "predicted": row["yhat"],
+                "min": row["yhat_lower"],
+                "max": row["yhat_upper"]
+            } for _, row in forecast.iterrows()
+        ]
+        return jsonify({"forecast": result})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+    
+@app.route("/api/hot-zones", methods=["GET"])
+def hot_zones_api():
+    try:
+        zones = find_hot_zones(csv_path="backend/campus_crimes.csv")
+        return jsonify({"hot_zones": zones})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+@app.route("/api/risk-predict", methods=["POST"])
+def api_risk_predict():
+    location = request.json.get("location")
+    hour = int(request.json.get("hour", 12))
+    # Add location-based filtering for a more advanced model
+    result = is_hour_risky(location, hour)
+    return jsonify({"risky": result})
 
 if __name__ == "__main__":
     app.run(debug=True)
