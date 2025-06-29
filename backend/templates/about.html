@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CampusZone</title>
-
     <!-- Tailwind CSS from CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -16,7 +15,6 @@
       rel="stylesheet"
     />
 
-<link rel="icon" type="image/png" href="images/Logo.png" />
     <!-- Custom CSS Styles -->
     <style>
       :root {
@@ -108,12 +106,7 @@
             <!-- Logo -->
             <a href="/">
               <div class="flex items-center space-x-3">
-                <img
-                  src="https://raw.githubusercontent.com/user-attachments/assets/ad0e62cc-839e-4cc7-9557-8d3946a3d831"
-                  alt="Campus Zone Logo"
-                  class="w-10 h-10"
-                />
-                <span
+                    <img src="{{ url_for('static', filename='images/Logo.png') }}" alt="Campus Zone Logo" class="w-32 h-32" />                <span
                   class="text-white text-xl font-bold tracking-wider uppercase"
                   >CampusZone</span
                 >
@@ -167,27 +160,27 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 justify-items-center">
             <!-- Team Member 1 -->
             <div class="flex flex-col items-center">
-              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Team Member" class="w-32 h-32 rounded-full object-cover border-4 border-[#49ab97] mb-4 shadow-lg" />
-              <div class="text-lg font-bold">Alex Kim</div>
-              <div class="text-[#49ab97] font-medium">Co-Founder</div>
+              <img src="{{ url_for('static', filename='images/Chris.jpg') }}" alt="Team Member" class="w-32 h-32 rounded-full object-cover border-4 border-[#49ab97] mb-4 shadow-lg" />
+              <div class="text-lg font-bold text-white">Chris Ho</div>
+              <div class="text-[#49ab97] font-medium">Frontend Developer</div>
             </div>
             <!-- Team Member 2 -->
             <div class="flex flex-col items-center">
-              <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="Team Member" class="w-32 h-32 rounded-full object-cover border-4 border-[#49ab97] mb-4 shadow-lg" />
-              <div class="text-lg font-bold">Jordan Lee</div>
-              <div class="text-[#49ab97] font-medium">Lead Developer</div>
+              <img src="{{ url_for('static', filename='images/pablo.jpg') }}" alt="Team Member" class="w-32 h-32 rounded-full object-cover border-4 border-[#49ab97] mb-4 shadow-lg" />
+              <div class="text-lg font-bold text-white">Pablo Molina</div>
+              <div class="text-[#49ab97] font-medium">Map Developer/Designer</div>
             </div>
             <!-- Team Member 3 -->
             <div class="flex flex-col items-center">
-              <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Team Member" class="w-32 h-32 rounded-full object-cover border-4 border-[#49ab97] mb-4 shadow-lg" />
-              <div class="text-lg font-bold">Morgan Patel</div>
-              <div class="text-[#49ab97] font-medium">Product Designer</div>
+              <img src="{{ url_for('static', filename='images/Anthony.jpg') }}" alt="Team Member" class="w-32 h-32 rounded-full object-cover border-4 border-[#49ab97] mb-4 shadow-lg" />
+              <div class="text-lg font-bold text-white">Anthony Vargas</div>
+              <div class="text-[#49ab97] font-medium">Data Engineer</div>
             </div>
             <!-- Team Member 4 -->
             <div class="flex flex-col items-center">
-              <img src="https://randomuser.me/api/portraits/women/85.jpg" alt="Team Member" class="w-32 h-32 rounded-full object-cover border-4 border-[#49ab97] mb-4 shadow-lg" />
-              <div class="text-lg font-bold">Taylor Smith</div>
-              <div class="text-[#49ab97] font-medium">Community Lead</div>
+              <img src="{{ url_for('static', filename='images/Lisa.jpg') }}" alt="Team Member" class="w-32 h-32 rounded-full object-cover border-4 border-[#49ab97] mb-4 shadow-lg" />
+              <div class="text-lg font-bold text-white">Lisa Krasiuk</div>
+              <div class="text-[#49ab97] font-medium">AI/ML Developer</div>
             </div>
           </div>
         </section>
@@ -197,18 +190,14 @@
       <footer
         class="pt-20 pb-10 text-white"
         style="background-color: var(--primary-dark-blue)"
+
       >
         <div class="container mx-auto px-6">
           <div class="grid grid-cols-4 gap-8">
             <!-- Column 1: Logo & Mission -->
             <div class="col-span-1">
               <div class="flex items-center space-x-3">
-                <img
-                  src="https://raw.githubusercontent.com/user-attachments/assets/ad0e62cc-839e-4cc7-9557-8d3946a3d831"
-                  alt="Campus Zone Logo"
-                  class="w-10 h-10"
-                />
-                <span
+                  <img src="{{ url_for('static', filename='images/Logo.png') }}" alt="Campus Zone Logo" class="w-32 h-32" />                <span
                   class="text-white text-xl font-bold tracking-wider uppercase"
                   >CampusZone</span
                 >
