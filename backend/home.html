@@ -107,13 +107,9 @@
             <!-- Logo -->
             <a href="/">
               <div class="flex items-center space-x-3">
-                <img
-                  src="https://raw.githubusercontent.com/user-attachments/assets/ad0e62cc-839e-4cc7-9557-8d3946a3d831"
-                  alt="Campus Zone Logo"
-                  class="w-10 h-10"
-                />
-                <span
-                  class="text-white text-xl font-bold tracking-wider uppercase"
+                  <img src="static/images/Logo.png" alt="Campus Zone Logo" class="w-32 h-32" />
+                  <span
+                class="text-white text-xl font-bold tracking-wider uppercase"
                   >CampusZone</span
                 >
               </div>
@@ -164,11 +160,7 @@
               <div
                 class="relative p-8 bg-primary-dark-blue/50 border-2 border-white/10 backdrop-blur-md rounded-full flex items-center justify-center"
               >
-                <img
-                  src="https://raw.githubusercontent.com/user-attachments/assets/ad0e62cc-839e-4cc7-9557-8d3946a3d831"
-                  alt="Campus Safety Logo"
-                  class="w-48 h-48 lg:w-64 lg:h-64"
-                />
+              <img src="static/images/Logo.png" alt="Campus Zone Logo" class="w-128 h-128 lg:w-128 lg:h-128" />
               </div>
             </div>
           </div>
@@ -176,47 +168,45 @@
       </main>
 
       <!-- Subscription Section -->
-      <section class="py-20" style="background-color: var(--background-cream)">
-        <div class="container mx-auto px-6 text-center">
-          <h2
-            class="text-3xl font-bold mb-2"
-            style="color: var(--primary-dark-blue)"
-          >
-            Join Our Safety Network
-          </h2>
-          <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
-            Get weekly crime reports and safety alerts delivered directly to
-            your inbox. Stay ahead, stay safe.
-          </p>
-          <form class="flex gap-3 max-w-lg mx-auto">
-            <input
-              type="email"
-              placeholder="your.email@example.com"
-              class="flex-grow w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-teal"
-              required
-            />
-            <button type="submit" class="btn-primary flex-shrink-0">
-              Subscribe
-            </button>
-          </form>
-        </div>
-      </section>
+    <section class="py-20 relative z-10" style="background-color: var(--background-cream)">
+      <div class="container mx-auto px-6 text-center">
+        <h2
+        class="text-3xl font-bold mb-2"
+        style="color: var(--primary-dark-blue)"
+    >
+      Join Our Safety Network
+    </h2>
+    <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
+      Get weekly crime reports and safety alerts delivered directly to
+      your inbox. Stay ahead, stay safe.
+    </p>
+    <form id="subscription-form" class="flex gap-3 max-w-lg mx-auto justify-center">
+  <input
+    id="subscription-email"
+    type="email"
+    placeholder="your.email@example.com"
+    class="flex-grow w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-teal"
+    required
+  />
+  <button
+    type="submit"
+    class="btn-primary flex-shrink-0 cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent-teal active:scale-95 transition"
+  >
+    Subscribe
+  </button>
+</form>
+<div id="subscription-message" class="mt-4 text-green-600 font-semibold hidden"></div>
+  </div>
+</section>
 
       <!-- Footer -->
-      <footer
-        class="pt-20 pb-10 text-white"
-        style="background-color: var(--primary-dark-blue)"
-      >
+      <footer class="relative z-20 pt-20 pb-10 text-white" style="background-color: var(--primary-dark-blue)">
         <div class="container mx-auto px-6">
           <div class="grid grid-cols-4 gap-8">
             <!-- Column 1: Logo & Mission -->
             <div class="col-span-1">
               <div class="flex items-center space-x-3">
-                <img
-                  src="https://raw.githubusercontent.com/user-attachments/assets/ad0e62cc-839e-4cc7-9557-8d3946a3d831"
-                  alt="Campus Zone Logo"
-                  class="w-10 h-10"
-                />
+                <img src="static/images/Logo.png" alt="Campus Zone Logo" class="w-32 h-32" />
                 <span
                   class="text-white text-xl font-bold tracking-wider uppercase"
                   >CampusZone</span
@@ -228,26 +218,23 @@
             </div>
 
             <!-- Column 2: Product Links -->
+             
             <div>
               <h3 class="font-bold text-lg tracking-wider">Product</h3>
               <ul class="mt-4 space-y-3">
                 <li>
-                  <a
-                    href="http://127.0.0.1:5000/dashboard"
-                    class="text-white/60 hover:text-white transition-colors"
-                    >Dashboard</a
-                  >
+                  <a href="/dashboard" class="text-white/60 hover:text-white transition-colors">Dashboard</a>
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/dashboard"
                     class="text-white/60 hover:text-white transition-colors"
                     >Compare Days</a
                   >
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/dashboard"
                     class="text-white/60 hover:text-white transition-colors"
                     >Past Trends</a
                   >
@@ -261,21 +248,21 @@
               <ul class="mt-4 space-y-3">
                 <li>
                   <a
-                    href="#"
+                    href="/about"
                     class="text-white/60 hover:text-white transition-colors"
                     >About Us</a
                   >
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/about"
                     class="text-white/60 hover:text-white transition-colors"
                     >Sponsors</a
                   >
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/about"
                     class="text-white/60 hover:text-white transition-colors"
                     >Contact</a
                   >
@@ -300,10 +287,12 @@
                     class="text-white/60 hover:text-white transition-colors"
                     >Privacy Policy</a
                   >
+              
                 </li>
               </ul>
             </div>
           </div>
+          
           <hr class="my-8 border-white/10" />
           <div class="flex justify-between items-center text-sm text-white/40">
             <p>&copy; 2025 CampusZone. All rights reserved.</p>
@@ -335,7 +324,25 @@
             </div>
           </div>
         </div>
+        
       </footer>
+      
     </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("subscription-form");
+    const input = document.getElementById("subscription-email");
+    const message = document.getElementById("subscription-message");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (input.value.trim() !== "") {
+        message.textContent = "Thank you! Your subscription has been received.";
+        message.classList.remove("hidden");
+        form.reset();
+      }
+    });
+  });
+</script>
   </body>
 </html>
