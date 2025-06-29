@@ -24,3 +24,6 @@ pandas==2.3.0
 # Reportlab
 reportlab==4.4.2
 pillow==11.2.1
+
+# scikit-learn
+scikit-learn==1.7.0
