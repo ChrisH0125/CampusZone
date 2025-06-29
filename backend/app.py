@@ -1,13 +1,24 @@
-from flask import Flask, request, jsonify, send_file, render_template, send_from_directory
+from flask import (
+    Flask,
+    request,
+    jsonify,
+    send_file,
+    render_template,
+    send_from_directory,
+)
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import letter
 from io import BytesIO
 import pandas as pd
 from flask_cors import CORS
 from gemini import get_forecast_summary
-from danger_score import danger_scores  # (or: from danger_score import get_location_scores)
+from danger_score import (
+    danger_scores,
+)  # (or: from danger_score import get_location_scores)
 import os
 from danger_score import get_danger_scores_by_hour
+import json
+from collections import Counter
 
 from danger_forecast import forecast_danger_by_hour
 from ml.forecast_prophet import forecast_incidents
@@ -56,7 +67,8 @@ def get_all():
 
 @app.route("/incidents/update", methods=["GET"])
 def update():
-  return update_database.update_data()
+    return update_database.update_data()
+
 
 # test gemini
 @app.route("/api/test-gemini", methods=["POST"])
@@ -70,6 +82,7 @@ def test_gemini():
         return jsonify({"result": result})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
 
 # 🚨 Danger Score endpoint:
 @app.route("/api/danger-score", methods=["POST"])
@@ -254,7 +267,8 @@ def compare_days():
         )
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-    
+
+
 @app.route("/api/forecast-prophet", methods=["POST"])
 def api_forecast_prophet():
     location = request.json.get("location")
@@ -268,13 +282,15 @@ def api_forecast_prophet():
                 "date": row["ds"].strftime("%Y-%m-%d"),
                 "predicted": row["yhat"],
                 "min": row["yhat_lower"],
-                "max": row["yhat_upper"]
-            } for _, row in forecast.iterrows()
+                "max": row["yhat_upper"],
+            }
+            for _, row in forecast.iterrows()
         ]
         return jsonify({"forecast": result})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-    
+
+
 @app.route("/api/hot-zones", methods=["GET"])
 def hot_zones_api():
     try:
@@ -283,6 +299,7 @@ def hot_zones_api():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+
 @app.route("/api/risk-predict", methods=["POST"])
 def api_risk_predict():
     location = request.json.get("location")
@@ -290,6 +307,125 @@ def api_risk_predict():
     # Add location-based filtering for a more advanced model
     result = is_hour_risky(location, hour)
     return jsonify({"risky": result})
+
+
+@app.route("/api/crime-forecast", methods=["GET"])
+def crime_forecast():
+    """
+    Generate crime forecast using data.json and return both text forecast and high-risk coordinates
+    """
+    try:
+        # Read data.json
+        with open(os.path.join(BASE_DIR, "data.json"), "r") as f:
+            crime_data = json.load(f)
+
+        # Analyze data for high-risk areas
+        high_risk_areas = analyze_high_risk_areas(crime_data)
+
+        # Prepare data for Gemini forecast
+        forecast_input = prepare_forecast_data(crime_data)
+
+        # Get forecast text from Gemini
+        from prompts import crime_forecast_prompt
+
+        prompt = crime_forecast_prompt.format(data=forecast_input)
+        forecast_text = get_forecast_summary(prompt)
+
+        return jsonify(
+            {"forecast_text": forecast_text, "high_risk_areas": high_risk_areas}
+        )
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+def analyze_high_risk_areas(crime_data):
+    """
+    Analyze crime data to identify high-risk coordinate clusters
+    """
+    # Group crimes by location and calculate risk metrics
+    location_data = {}
+
+    for crime in crime_data:
+        coords = crime.get("coordinates", {})
+        lat = coords.get("latitude")
+        lng = coords.get("longitude")
+
+        if lat and lng:
+            # Round coordinates to group nearby crimes
+            rounded_lat = round(lat, 3)
+            rounded_lng = round(lng, 3)
+            location_key = f"{rounded_lat},{rounded_lng}"
+
+            if location_key not in location_data:
+                location_data[location_key] = {
+                    "latitude": rounded_lat,
+                    "longitude": rounded_lng,
+                    "crimes": [],
+                    "total_danger": 0,
+                    "crime_count": 0,
+                }
+
+            location_data[location_key]["crimes"].append(crime.get("name", "Unknown"))
+            location_data[location_key]["total_danger"] += crime.get("danger_level", 0)
+            location_data[location_key]["crime_count"] += 1
+
+    # Calculate risk scores and identify high-risk areas
+    high_risk_areas = []
+
+    for location_key, data in location_data.items():
+        if data["crime_count"] >= 2:  # Only consider areas with multiple crimes
+            avg_danger = data["total_danger"] / data["crime_count"]
+            risk_score = (data["crime_count"] * 0.3) + (avg_danger * 0.7)
+
+            # Get most common crime types
+            crime_counter = Counter(data["crimes"])
+            top_crimes = [crime for crime, count in crime_counter.most_common(3)]
+
+            # Determine risk level
+            if risk_score >= 0.7:
+                risk_level = "high"
+            elif risk_score >= 0.5:
+                risk_level = "medium"
+            else:
+                risk_level = "low"
+
+            high_risk_areas.append(
+                {
+                    "coordinates": {
+                        "latitude": data["latitude"],
+                        "longitude": data["longitude"],
+                    },
+                    "risk_level": risk_level,
+                    "risk_score": round(risk_score, 2),
+                    "crime_count": data["crime_count"],
+                    "predicted_crimes": top_crimes,
+                    "confidence": min(0.9, risk_score),
+                }
+            )
+
+    # Sort by risk score and return top 10
+    high_risk_areas.sort(key=lambda x: x["risk_score"], reverse=True)
+    return high_risk_areas[:10]
+
+
+def prepare_forecast_data(crime_data):
+    """
+    Prepare crime data summary for Gemini analysis
+    """
+    summary_lines = []
+
+    for crime in crime_data[:50]:  # Limit to recent 50 crimes for prompt efficiency
+        address = crime.get("address", "Unknown Location")
+        crime_type = crime.get("name", "Unknown Crime")
+        danger_level = crime.get("danger_level", 0)
+        time = crime.get("time", "Unknown Time")
+
+        summary_lines.append(
+            f"Location: {address}, Crime: {crime_type}, Danger Level: {danger_level}, Time: {time}"
+        )
+
+    return "\n".join(summary_lines)
 
 
 if __name__ == "__main__":

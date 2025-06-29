@@ -1,96 +1,140 @@
-# CampusZone
-### Campus Safety Forecast App
+# CampusZone Backend
 
-A predictive web app that identifies high-risk zones on campus based on past incident data and provides AI-generated safety recommendations using Gemini.
+A Flask-based campus safety management system that provides crime data analysis, danger scoring, and predictive forecasting for university campuses.
 
-## 🔍 Problem Statement
+## Features
 
-Students receive campus alerts *after* an incident occurs — but what if we could **forecast** risk zones before students head out?
+### Core Functionality
+- **Crime Data Management**: Process and serve campus crime incident data
+- **Danger Scoring**: Calculate location-based danger scores and risk assessments  
+- **Predictive Analytics**: Machine learning-powered crime forecasting using Facebook Prophet
+- **Hot Zone Detection**: Identify high-risk areas based on historical crime patterns
+- **Safety Reports**: Generate comprehensive PDF safety reports
+- **AI-Powered Insights**: Gemini AI integration for intelligent crime pattern analysis
 
-## 🎯 Our Solution
+### API Endpoints
 
-We built a tool that lets students:
-- Choose a day and time
-- View an interactive map of campus danger zones
-- Get a real-time safety summary powered by Gemini
-- Compare two days for risk level
-- Export their summary or get it via email/SMS
+#### Data Management
+- `GET /data.json` - Retrieve crime data
+- `GET /incidents/all` - Get all incident records  
+- `GET /incidents/update` - Update database with latest incidents
+- `GET /api/locations` - Get list of all campus locations
+- `GET /api/clean-data` - Clean and normalize crime data
 
-## 💡 Features
+#### Safety Analysis
+- `POST /api/danger-score` - Get danger score for specific location
+- `POST /api/danger-score-by-hour` - Get hourly danger scores
+- `POST /api/danger-forecast` - Generate danger forecasts for locations
+- `POST /api/risk-predict` - Predict risk level for location and time
+- `GET /api/hot-zones` - Identify high-crime areas
 
-- 📍 Color-coded interactive campus map
-- 📅 Day selector (default = today)
-- ⚠️ AI-generated summary of top risk zones
-- 🔁 Compare days side-by-side
-- 🔥 Forecast animation of shifting danger zones
-- 📈 Past trends sparkline (danger score over time)
-- 📄 Download as PDF or share via email
-- 🔐 Optional student login for personalized Gemini alerts
-- 📫 Newsletter signup to get weekly safety tips
+#### Machine Learning & Forecasting  
+- `POST /api/forecast-prophet` - Facebook Prophet-based incident forecasting
+- `GET /api/crime-forecast` - Comprehensive crime forecast with coordinates
+- `POST /api/compare-days` - Compare safety between different days/periods
 
-## 🛠️ Tech Stack
+#### AI & Reports
+- `POST /api/gemini-summary` - AI-generated incident summaries
+- `POST /api/test-gemini` - Test Gemini AI integration
+- `POST /api/export-pdf` - Generate PDF safety reports
 
-| Frontend   | Backend       | ML & AI       | Database     |
-|------------|---------------|---------------|--------------|
-| React      | Flask (Python)| Gemini API    | SQLite / SQL |
-| Leaflet.js | REST API      | Danger Scoring| Pandas       |
-| TailwindCSS| Axios         |               |              |
+### Tech Stack
 
-## 📂 File Structure
-    📁 frontend/
-    └── components/
-    └── pages/
-    📁 backend/
-    └── app.py
-    └── danger_score.py
-    └── gemini_summary.py
-    📁 data/
-    └── campus_incidents.csv
-    .env
-    README.md
+- **Backend Framework**: Flask 2.3.2
+- **Database**: PostgreSQL with psycopg2
+- **AI Integration**: Google Gemini AI
+- **Machine Learning**: Facebook Prophet, scikit-learn
+- **Data Processing**: pandas, numpy
+- **Geospatial**: geopandas, geopy
+- **PDF Generation**: ReportLab
+- **Environment Management**: python-dotenv
 
-[📖 Full API Documentation →](./API.md)
+## Installation
 
-## 🔗 Live Demo
+1. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
 
-[Coming Soon]
+2. Set up environment variables in `.env`:
+```
+GEMINI_API_KEY=your_gemini_api_key
+DB_USER=your_db_user
+DB_PASSWORD=your_db_password
+DB_HOST=your_db_host
+DB_PORT=your_db_port
+DB_NAME=your_db_name
+```
 
-## 📸 Screenshots
+3. Run the application:
+```bash
+python app.py
+```
 
-- Map with danger zones
-- Gemini summary
-- Day comparison view
-- Sparkline of past weeks
+## Project Structure
 
-## ⚙️ How to Run Locally
+```
+backend/
+├── app.py              # Main Flask application
+├── config.py           # Configuration management
+├── prompts.py          # AI prompt templates
+├── gemini.py           # Gemini AI integration
+├── danger_score.py     # Danger scoring algorithms
+├── danger_forecast.py  # Danger forecasting logic
+├── hot_zones.py        # Hot zone detection
+├── database/
+│   ├── db.py          # Database connection
+│   ├── incidents.py   # Incident management
+│   └── update_database.py # Database updates
+├── ml/
+│   ├── forecast_prophet.py # Prophet forecasting
+│   ├── risk_classifier.py # Risk classification
+│   └── plot_danger_by_hour.py # Visualization
+├── static/            # Static assets (images, JS)
+├── templates/         # HTML templates
+└── tests/            # Test suite
+```
 
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/ChrisH0125/CampusZone.git
+## API Usage Examples
 
-2. Install backend dependencies:
-    ```bash
-    cd backend
-    pip install -r requirements.txt
+### Get Danger Score
+```bash
+curl -X POST http://localhost:5000/api/danger-score \
+  -H "Content-Type: application/json" \
+  -d '{"location": "Library"}'
+```
 
-3. Start Flask backend:
-    ```bash
-    python app.py
+### Generate Forecast
+```bash
+curl -X POST http://localhost:5000/api/forecast-prophet \
+  -H "Content-Type: application/json" \
+  -d '{"location": "Student Union", "days": 7}'
+```
 
-4. Run frontend:
-    ```bash
-    cd frontend
-    npm install
-    npm run dev
+### Export Safety Report
+```bash
+curl -X POST http://localhost:5000/api/export-pdf \
+  -H "Content-Type: application/json" \
+  -d '{"summary": "Monthly safety report content..."}'
+```
 
-5. Make sure to create a .env with your Gemini API key.
+## Development
 
-## 👥 Team
-Name	Role
-Lisa	ML Developer
-Anthony	Data Engineer
-Pablo	Map Engineer
-Chris	AI & UX Writer
+- The application runs in debug mode by default
+- CORS is enabled for cross-origin requests
+- Static files are served from `/static/` directory
+- Templates use Jinja2 templating engine
 
-## 💬 Inspiration
-We wanted to create a tool that could prevent harm, not just report it — using open data, accessible maps, and generative AI to empower students.
+## Testing
+
+Run tests with:
+```bash
+python -m pytest tests/
+```
+
+## Contributing
+
+1. Follow existing code style and patterns
+2. Add tests for new functionality
+3. Update documentation as needed
+4. Ensure all endpoints handle errors gracefully
