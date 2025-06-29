@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, send_file, render_template
+from flask import Flask, request, jsonify, send_file, render_template, send_from_directory
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import letter
 from io import BytesIO
@@ -41,6 +41,11 @@ def about():
 @app.route("/dashboard")
 def dashboard():
     return render_template("map.html")
+
+
+@app.route("/data.json")
+def crime_data():
+    return send_from_directory(BASE_DIR, "data.json")
 
 
 # database routes
