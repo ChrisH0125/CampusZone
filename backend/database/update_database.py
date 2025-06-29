@@ -18,16 +18,18 @@ def update_data():
   con = db.get_db_connection()
   cur = con.cursor()
 
-  try:
-    for crime in crime_list:
-      time_str = crime['time']
-      time_stamp = datetime.datetime.strptime(time_str, "%a, %d %b %Y %H:%M:%S %Z")
-      print(time_stamp)
 
-      cur.execute("insert into incidents (name, time, address, case_number, case_status) values (%s, %s, %s, %s, %s)", (crime['name'], time_stamp, crime['address'],crime['case_number'],crime['case_status']))
-      con.commit()
-  except Exception as e:
-    return "error"
+  for crime in crime_list:
+    time_str = crime['time']
+    time_stamp = datetime.datetime.strptime(time_str, "%a, %d %b %Y %H:%M:%S %Z")
+    
+    latitude=crime['coordinates']['latitude']
+    longitude=crime['coordinates']['longitude']
+    coord_list = f'[{latitude}, {longitude}]'
+
+    cur.execute("insert into incidents (name, time, address, coordinates, case_status, case_number) values (%s, %s, %s, %s, %s, %s)", (crime['name'], time_stamp, crime['address'], coord_list, crime['case_number'], crime['case_status']))
+    con.commit()
+
 
   cur.close()
   
