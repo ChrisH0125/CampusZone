@@ -59,7 +59,84 @@ async function loadCrimeData() {
   }
 }
 
-// 4. Get user's current location and center map
+// 4. Load crime forecast data and add forecast markers
+async function loadCrimeForecast() {
+  try {
+    const response = await fetch('/api/crime-forecast');
+    const forecastData = await response.json();
+    
+    // Update forecast text
+    const forecastText = document.getElementById('forecast-text');
+    const forecastLoading = document.getElementById('forecast-loading');
+    const forecastError = document.getElementById('forecast-error');
+    const forecastLegend = document.getElementById('forecast-legend');
+    
+    if (forecastData.error) {
+      forecastLoading.classList.add('hidden');
+      forecastError.classList.remove('hidden');
+      forecastError.textContent = `Error loading forecast: ${forecastData.error}`;
+      return;
+    }
+    
+    // Display forecast text
+    forecastLoading.classList.add('hidden');
+    forecastText.classList.remove('hidden');
+    forecastText.innerHTML = forecastData.forecast_text;
+    forecastLegend.classList.remove('hidden');
+    
+    // Add forecast markers to map
+    forecastData.high_risk_areas.forEach(area => {
+      const coords = area.coordinates;
+      
+      // Determine marker color based on risk level
+      let markerColor;
+      if (area.risk_level === 'high') {
+        markerColor = '#FF0000'; // Red
+      } else if (area.risk_level === 'medium') {
+        markerColor = '#FFA500'; // Orange
+      } else {
+        markerColor = '#FFFF00'; // Yellow
+      }
+      
+      // Create custom icon for forecast markers
+      const forecastIcon = L.divIcon({
+        className: 'forecast-marker',
+        html: `<div style="background-color: ${markerColor}; width: 20px; height: 20px; border-radius: 50%; border: 2px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></div>`,
+        iconSize: [20, 20],
+        iconAnchor: [10, 10]
+      });
+      
+      // Create popup content
+      const popupContent = `
+        <div style="font-family: Arial, sans-serif;">
+          <h3 style="margin: 0 0 8px 0; color: #333;">Forecast: ${area.risk_level.toUpperCase()} Risk Area</h3>
+          <p style="margin: 4px 0;"><strong>Risk Score:</strong> ${area.risk_score}</p>
+          <p style="margin: 4px 0;"><strong>Historical Crimes:</strong> ${area.crime_count}</p>
+          <p style="margin: 4px 0;"><strong>Predicted Crime Types:</strong> ${area.predicted_crimes.join(', ')}</p>
+          <p style="margin: 4px 0;"><strong>Confidence:</strong> ${Math.round(area.confidence * 100)}%</p>
+        </div>
+      `;
+      
+      // Add forecast marker to map
+      L.marker([coords.latitude, coords.longitude], {
+        icon: forecastIcon
+      })
+        .addTo(map)
+        .bindPopup(popupContent);
+    });
+    
+  } catch (error) {
+    console.error('Error loading crime forecast:', error);
+    const forecastLoading = document.getElementById('forecast-loading');
+    const forecastError = document.getElementById('forecast-error');
+    
+    forecastLoading.classList.add('hidden');
+    forecastError.classList.remove('hidden');
+    forecastError.textContent = 'Error loading crime forecast. Please try again later.';
+  }
+}
+
+// 5. Get user's current location and center map
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(
     function(position) {
@@ -75,8 +152,9 @@ if (navigator.geolocation) {
         .bindPopup("You are here!")
         .openPopup();
       
-      // Load crime data after setting location
+      // Load crime data and forecast after setting location
       loadCrimeData();
+      loadCrimeForecast();
     },
     function(error) {
       console.log("Geolocation error:", error);
@@ -86,8 +164,9 @@ if (navigator.geolocation) {
         .bindPopup("Default location: Orlando, FL")
         .openPopup();
       
-      // Load crime data even on error
+      // Load crime data and forecast even on error
       loadCrimeData();
+      loadCrimeForecast();
     }
   );
 } else {
@@ -98,6 +177,7 @@ if (navigator.geolocation) {
     .bindPopup("Default location: Orlando, FL")
     .openPopup();
   
-  // Load crime data
+  // Load crime data and forecast
   loadCrimeData();
+  loadCrimeForecast();
 }

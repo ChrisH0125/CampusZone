@@ -166,6 +166,38 @@
           <div id="map"></div>
         </div>
 
+        <!-- Crime Forecast Section -->
+        <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 mb-8">
+          <h2 class="text-2xl font-bold text-white mb-4">Crime Forecast</h2>
+          <div id="forecast-content">
+            <div id="forecast-loading" class="text-white/70">
+              <div class="flex items-center space-x-2">
+                <div class="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
+                <span>Generating crime forecast...</span>
+              </div>
+            </div>
+            <div id="forecast-text" class="text-white/90 leading-relaxed hidden"></div>
+            <div id="forecast-error" class="text-red-300 hidden"></div>
+          </div>
+          <div id="forecast-legend" class="mt-4 hidden">
+            <h3 class="text-lg font-semibold text-white mb-2">Map Legend</h3>
+            <div class="flex flex-wrap gap-4 text-sm">
+              <div class="flex items-center space-x-2">
+                <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                <span class="text-white/70">High Risk Area</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                <span class="text-white/70">Medium Risk Area</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                <span class="text-white/70">Low Risk Area</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Bottom Info Section -->
         <div class="text-center">
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
