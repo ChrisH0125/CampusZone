@@ -7,6 +7,7 @@ def get_all_incidents():
 
   incidents_arr = []
   rows = cur.fetchall()
+  print("Number of incidents fetched:", len(rows))  # Debug line
   for r in rows:
     incidents_arr.append({
       'name':r[1],
@@ -18,9 +19,9 @@ def get_all_incidents():
       'danger_level':r[7] or None
     })
 
-    cur.close()
-    con.close()
+  cur.close()
+  con.close()
 
-    return incidents_arr
+  return incidents_arr
 
   
