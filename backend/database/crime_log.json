@@ -1,875 +1,1166 @@
 [
-  {
-    "address": "4512 GEMINI BLVD E",
-    "case_number": "2025-1129",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "PETIT THEFT",
-    "time": "Wed, 14 May 2025 14:03:17 GMT"
-  },
-  {
-    "address": "12100 UNIVERSITY BLVD",
-    "case_number": "2025-2301",
-    "case_status": "OPEN",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "BURGLARY OF CONVEYANCE",
-    "time": "Fri, 20 Jun 2025 08:45:00 GMT"
-  },
-  {
-    "address": "4000 CENTRAL FLORIDA BLVD",
-    "case_number": "2024-8843",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "CRIMINAL MISCHIEF / VANDALISM",
-    "time": "Tue, 17 Sep 2024 22:15:30 GMT"
-  },
-  {
-    "address": "12800 PEGASUS DR",
-    "case_number": "2025-0456",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "POSSESSION OF ALCOHOL (UNDER 21)",
-    "time": "Sat, 01 Feb 2025 01:20:11 GMT"
-  },
-  {
-    "address": "4221 ORION BLVD N",
-    "case_number": "2024-9102",
-    "case_status": "OPEN",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "DISORDERLY CONDUCT",
-    "time": "Mon, 14 Oct 2024 18:33:45 GMT"
-  },
-  {
-    "address": "3910 LOCKSLEY LN",
-    "case_number": "2025-1808",
-    "case_status": "OPEN",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "PETIT THEFT",
-    "time": "Sat, 28 Jun 2025 21:24:00 GMT"
-  },
-  {
-    "address": "11801 RESEARCH PKWY",
-    "case_number": "2024-7321",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "TRESPASSING",
-    "time": "Sun, 28 Jul 2024 03:05:59 GMT"
-  },
-  {
-    "address": "4800 SCORPIO CT",
-    "case_number": "2025-1599",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "THEFT FROM BUILDING",
-    "time": "Thu, 22 May 2025 11:55:02 GMT"
-  },
-  {
-    "address": "12201 TECHNOLOGY PKWY",
-    "case_number": "2024-9987",
-    "case_status": "OPEN",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "BURGLARY OF CONVEYANCE",
-    "time": "Wed, 27 Nov 2024 06:10:38 GMT"
-  },
-  {
-    "address": "4300 APOLLO DR",
-    "case_number": "2025-0012",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "POSSESSION OF CANNABIS < 20G",
-    "time": "Wed, 01 Jan 2025 20:00:00 GMT"
-  },
-  {
-    "address": "12500 ALAFYA TRAIL",
-    "case_number": "2025-1988",
-    "case_status": "OPEN",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "STALKING",
-    "time": "Tue, 10 Jun 2025 13:21:44 GMT"
-  },
-  {
-    "address": "4111 PICTOR LN",
-    "case_number": "2024-6999",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "PETIT THEFT",
-    "time": "Fri, 12 Jul 2024 16:40:19 GMT"
-  },
-  {
-    "address": "12000 CHALLENGER PKWY",
-    "case_number": "2025-0823",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "TRAFFIC OFFENSE",
-    "time": "Mon, 10 Mar 2025 09:05:12 GMT"
-  },
-  {
-    "address": "4401 LIBRA DR",
-    "case_number": "2024-10521",
-    "case_status": "OPEN",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "CRIMINAL MISCHIEF / VANDALISM",
-    "time": "Sat, 21 Dec 2024 23:50:00 GMT"
-  },
-  {
-    "address": "3800 AQUARIUS AGORA DR",
-    "case_number": "2025-0210",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "DISORDERLY CONDUCT",
-    "time": "Sun, 19 Jan 2025 02:30:47 GMT"
-  },
-  {
-    "address": "12345 UNIVERSITY BLVD",
-    "case_number": "2024-8150",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "PETIT THEFT",
-    "time": "Tue, 27 Aug 2024 15:11:34 GMT"
-  },
-  {
-    "address": "4600 GEMINI BLVD S",
-    "case_number": "2025-1345",
-    "case_status": "OPEN",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "BURGLARY OF CONVEYANCE",
-    "time": "Wed, 30 Apr 2025 04:56:10 GMT"
-  },
-  {
-    "address": "12900 PEGASUS DR",
-    "case_number": "2024-9532",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "POSSESSION OF ALCOHOL (UNDER 21)",
-    "time": "Fri, 08 Nov 2024 23:12:05 GMT"
-  },
-  {
-    "address": "4250 ORION BLVD N",
-    "case_number": "2025-0789",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "THEFT FROM BUILDING",
-    "time": "Sat, 08 Mar 2025 19:22:51 GMT"
-  },
-  {
-    "address": "4055 CENTRAL FLORIDA BLVD",
-    "case_number": "2024-10111",
-    "case_status": "OPEN",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "TRESPASSING",
-    "time": "Mon, 02 Dec 2024 12:00:00 GMT"
-  },
-  {
-    "address": "12650 ALAFYA TRAIL",
-    "case_number": "2025-2112",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "CRIMINAL MISCHIEF / VANDALISM",
-    "time": "Sun, 15 Jun 2025 18:48:22 GMT"
-  },
-  {
-    "address": "11900 RESEARCH PKWY",
-    "case_number": "2025-0155",
-    "case_status": "OPEN",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "POSSESSION OF CANNABIS < 20G",
-    "time": "Fri, 10 Jan 2025 21:33:14 GMT"
-  },
-  {
-    "address": "4750 SCORPIO CT",
-    "case_number": "2024-8345",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "PETIT THEFT",
-    "time": "Wed, 04 Sep 2024 10:25:00 GMT"
-  },
-  {
-    "address": "12255 TECHNOLOGY PKWY",
-    "case_number": "2025-1492",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "BURGLARY OF CONVEYANCE",
-    "time": "Tue, 13 May 2025 07:18:36 GMT"
-  },
-  {
-    "address": "4350 APOLLO DR",
-    "case_number": "2024-9210",
-    "case_status": "OPEN",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "STALKING",
-    "time": "Sun, 20 Oct 2024 11:30:15 GMT"
-  },
-  {
-    "address": "4150 PICTOR LN",
-    "case_number": "2025-2400",
-    "case_status": "OPEN",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "DISORDERLY CONDUCT",
-    "time": "Wed, 25 Jun 2025 00:50:29 GMT"
-  },
-  {
-    "address": "12150 CHALLENGER PKWY",
-    "case_number": "2024-7543",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "TRAFFIC OFFENSE",
-    "time": "Mon, 05 Aug 2024 17:01:53 GMT"
-  },
-  {
-    "address": "4444 LIBRA DR",
-    "case_number": "2025-0555",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "THEFT FROM BUILDING",
-    "time": "Thu, 13 Feb 2025 14:44:44 GMT"
-  },
-  {
-    "address": "3850 AQUARIUS AGORA DR",
-    "case_number": "2024-10888",
-    "case_status": "OPEN",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "PETIT THEFT",
-    "time": "Tue, 31 Dec 2024 20:10:30 GMT"
-  },
-  {
-    "address": "12400 UNIVERSITY BLVD",
-    "case_number": "2025-1678",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "CRIMINAL MISCHIEF / VANDALISM",
-    "time": "Sat, 24 May 2025 21:05:18 GMT"
-  },
-  {
-    "address": "4550 GEMINI BLVD E",
-    "case_number": "2024-8765",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "BURGLARY OF CONVEYANCE",
-    "time": "Fri, 20 Sep 2024 02:20:45 GMT"
-  },
-  {
-    "address": "12750 PEGASUS DR",
-    "case_number": "2025-0321",
-    "case_status": "OPEN",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "POSSESSION OF ALCOHOL (UNDER 21)",
-    "time": "Wed, 29 Jan 2025 22:45:00 GMT"
-  },
-  {
-    "address": "4190 ORION BLVD N",
-    "case_number": "2024-9400",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "TRESPASSING",
-    "time": "Wed, 30 Oct 2024 14:00:19 GMT"
-  },
-  {
-    "address": "4088 CENTRAL FLORIDA BLVD",
-    "case_number": "2025-2001",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "PETIT THEFT",
-    "time": "Fri, 13 Jun 2025 12:34:56 GMT"
-  },
-  {
-    "address": "12555 ALAFYA TRAIL",
-    "case_number": "2025-0690",
-    "case_status": "OPEN",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "DISORDERLY CONDUCT",
-    "time": "Sun, 23 Feb 2025 03:15:22 GMT"
-  },
-  {
-    "address": "11950 RESEARCH PKWY",
-    "case_number": "2024-7890",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "POSSESSION OF CANNABIS < 20G",
-    "time": "Sat, 17 Aug 2024 23:40:11 GMT"
-  },
-  {
-    "address": "4711 SCORPIO CT",
-    "case_number": "2025-1730",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "THEFT FROM BUILDING",
-    "time": "Mon, 26 May 2025 10:10:10 GMT"
-  },
-  {
-    "address": "12301 TECHNOLOGY PKWY",
-    "case_number": "2025-0099",
-    "case_status": "OPEN",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "STALKING",
-    "time": "Tue, 07 Jan 2025 18:00:21 GMT"
-  },
-  {
-    "address": "4380 APOLLO DR",
-    "case_number": "2024-10400",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "TRAFFIC OFFENSE",
-    "time": "Wed, 18 Dec 2024 08:30:00 GMT"
-  },
-  {
-    "address": "4180 PICTOR LN",
-    "case_number": "2025-1010",
-    "case_status": "OPEN",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "PETIT THEFT",
-    "time": "Mon, 07 Apr 2025 13:00:00 GMT"
-  },
-  {
-    "address": "12222 CHALLENGER PKWY",
-    "case_number": "2024-8500",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "BURGLARY OF CONVEYANCE",
-    "time": "Sun, 08 Sep 2024 22:22:22 GMT"
-  },
-  {
-    "address": "4420 LIBRA DR",
-    "case_number": "2025-2250",
-    "case_status": "OPEN",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "CRIMINAL MISCHIEF / VANDALISM",
-    "time": "Mon, 16 Jun 2025 09:15:33 GMT"
-  },
-  {
-    "address": "3880 AQUARIUS AGORA DR",
-    "case_number": "2025-0411",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "POSSESSION OF ALCOHOL (UNDER 21)",
-    "time": "Sat, 01 Feb 2025 00:30:00 GMT"
-  },
-  {
-    "address": "12300 UNIVERSITY BLVD",
-    "case_number": "2024-9777",
-    "case_status": "OPEN",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "TRESPASSING",
-    "time": "Sat, 16 Nov 2024 19:45:00 GMT"
-  },
-  {
-    "address": "4655 GEMINI BLVD S",
-    "case_number": "2025-1234",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "PETIT THEFT",
-    "time": "Tue, 22 Apr 2025 17:21:54 GMT"
-  },
-  {
-    "address": "12888 PEGASUS DR",
-    "case_number": "2024-7001",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "THEFT FROM BUILDING",
-    "time": "Sat, 13 Jul 2024 11:11:11 GMT"
-  },
-  {
-    "address": "4288 ORION BLVD N",
-    "case_number": "2025-2389",
-    "case_status": "OPEN",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "DISORDERLY CONDUCT",
-    "time": "Tue, 24 Jun 2025 23:59:59 GMT"
-  },
-  {
-    "address": "4100 CENTRAL FLORIDA BLVD",
-    "case_number": "2025-0600",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "BURGLARY OF CONVEYANCE",
-    "time": "Tue, 18 Feb 2025 01:01:01 GMT"
-  },
-  {
-    "address": "12601 ALAFYA TRAIL",
-    "case_number": "2024-8999",
-    "case_status": "OPEN",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "CRIMINAL MISCHIEF / VANDALISM",
-    "time": "Mon, 23 Sep 2024 20:20:20 GMT"
-  },
-  {
-    "address": "11850 RESEARCH PKWY",
-    "case_number": "2025-1900",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "POSSESSION OF CANNABIS < 20G",
-    "time": "Sat, 07 Jun 2025 16:50:30 GMT"
-  },
-  {
-    "address": "4810 SCORPIO CT",
-    "case_number": "2025-0250",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "STALKING",
-    "time": "Wed, 22 Jan 2025 08:00:00 GMT"
-  },
-  {
-    "address": "12199 TECHNOLOGY PKWY",
-    "case_number": "2024-10753",
-    "case_status": "OPEN",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "TRAFFIC OFFENSE",
-    "time": "Sun, 29 Dec 2024 15:15:15 GMT"
-  },
-  {
-    "address": "4321 APOLLO DR",
-    "case_number": "2025-0888",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "PETIT THEFT",
-    "time": "Fri, 21 Mar 2025 18:30:00 GMT"
-  },
-  {
-    "address": "4123 PICTOR LN",
-    "case_number": "2024-8001",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "THEFT FROM BUILDING",
-    "time": "Wed, 21 Aug 2024 12:45:00 GMT"
-  },
-  {
-    "address": "12050 CHALLENGER PKWY",
-    "case_number": "2025-2150",
-    "case_status": "OPEN",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "BURGLARY OF CONVEYANCE",
-    "time": "Sat, 14 Jun 2025 05:30:10 GMT"
-  },
-  {
-    "address": "4488 LIBRA DR",
-    "case_number": "2025-0399",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "POSSESSION OF ALCOHOL (UNDER 21)",
-    "time": "Fri, 31 Jan 2025 23:59:00 GMT"
-  },
-  {
-    "address": "3810 AQUARIUS AGORA DR",
-    "case_number": "2024-9669",
-    "case_status": "OPEN",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "TRESPASSING",
-    "time": "Wed, 13 Nov 2024 10:00:00 GMT"
-  },
-  {
-    "address": "12344 UNIVERSITY BLVD",
-    "case_number": "2025-1199",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "DISORDERLY CONDUCT",
-    "time": "Sun, 18 May 2025 02:45:00 GMT"
-  },
-  {
-    "address": "4699 GEMINI BLVD S",
-    "case_number": "2024-7123",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "CRIMINAL MISCHIEF / VANDALISM",
-    "time": "Mon, 15 Jul 2024 21:30:00 GMT"
-  },
-  {
-    "address": "12950 PEGASUS DR",
-    "case_number": "2025-1850",
-    "case_status": "OPEN",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "PETIT THEFT",
-    "time": "Wed, 04 Jun 2025 14:20:15 GMT"
-  },
-  {
-    "address": "4210 ORION BLVD N",
-    "case_number": "2025-0500",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "THEFT FROM BUILDING",
-    "time": "Sat, 08 Feb 2025 13:13:13 GMT"
-  },
-  {
-    "address": "4150 CENTRAL FLORIDA BLVD",
-    "case_number": "2024-9888",
-    "case_status": "OPEN",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "STALKING",
-    "time": "Tue, 19 Nov 2024 09:09:09 GMT"
-  },
-  {
-    "address": "12700 ALAFYA TRAIL",
-    "case_number": "2025-0750",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "POSSESSION OF CANNABIS < 20G",
-    "time": "Wed, 05 Mar 2025 22:00:00 GMT"
-  },
-  {
-    "address": "11789 RESEARCH PKWY",
-    "case_number": "2024-8200",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "TRAFFIC OFFENSE",
-    "time": "Fri, 30 Aug 2024 16:16:16 GMT"
-  },
-  {
-    "address": "4888 SCORPIO CT",
-    "case_number": "2025-2333",
-    "case_status": "OPEN",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "BURGLARY OF CONVEYANCE",
-    "time": "Sun, 22 Jun 2025 04:44:44 GMT"
-  },
-  {
-    "address": "12051 TECHNOLOGY PKWY",
-    "case_number": "2025-0111",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "PETIT THEFT",
-    "time": "Thu, 09 Jan 2025 11:33:11 GMT"
-  },
-  {
-    "address": "4399 APOLLO DR",
-    "case_number": "2024-10999",
-    "case_status": "OPEN",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "CRIMINAL MISCHIEF / VANDALISM",
-    "time": "Tue, 31 Dec 2024 23:58:00 GMT"
-  },
-  {
-    "address": "4199 PICTOR LN",
-    "case_number": "2025-1099",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "DISORDERLY CONDUCT",
-    "time": "Sat, 12 Apr 2025 01:23:45 GMT"
-  },
-  {
-    "address": "12250 CHALLENGER PKWY",
-    "case_number": "2024-8654",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "POSSESSION OF ALCOHOL (UNDER 21)",
-    "time": "Tue, 17 Sep 2024 23:00:00 GMT"
-  },
-  {
-    "address": "4450 LIBRA DR",
-    "case_number": "2025-1777",
-    "case_status": "OPEN",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "TRESPASSING",
-    "time": "Wed, 28 May 2025 15:55:55 GMT"
-  },
-  {
-    "address": "3890 AQUARIUS AGORA DR",
-    "case_number": "2024-7222",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "THEFT FROM BUILDING",
-    "time": "Wed, 17 Jul 2024 10:30:00 GMT"
-  },
-  {
-    "address": "12388 UNIVERSITY BLVD",
-    "case_number": "2025-0420",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "PETIT THEFT",
-    "time": "Sun, 02 Feb 2025 19:00:00 GMT"
-  },
-  {
-    "address": "4621 GEMINI BLVD S",
-    "case_number": "2025-1444",
-    "case_status": "OPEN",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "BURGLARY OF CONVEYANCE",
-    "time": "Fri, 09 May 2025 03:03:03 GMT"
-  },
-  {
-    "address": "12821 PEGASUS DR",
-    "case_number": "2024-9333",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "CRIMINAL MISCHIEF / VANDALISM",
-    "time": "Sun, 27 Oct 2024 17:17:17 GMT"
-  },
-  {
-    "address": "4266 ORION BLVD N",
-    "case_number": "2025-2222",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "STALKING",
-    "time": "Sun, 15 Jun 2025 22:22:22 GMT"
-  },
-  {
-    "address": "4021 CENTRAL FLORIDA BLVD",
-    "case_number": "2025-0633",
-    "case_status": "OPEN",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "POSSESSION OF CANNABIS < 20G",
-    "time": "Sat, 22 Feb 2025 21:21:21 GMT"
-  },
-  {
-    "address": "12621 ALAFYA TRAIL",
-    "case_number": "2024-9090",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "TRAFFIC OFFENSE",
-    "time": "Thu, 26 Sep 2024 08:08:08 GMT"
-  },
-  {
-    "address": "11821 RESEARCH PKWY",
-    "case_number": "2025-2020",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "DISORDERLY CONDUCT",
-    "time": "Sun, 08 Jun 2025 01:01:01 GMT"
-  },
-  {
-    "address": "4821 SCORPIO CT",
-    "case_number": "2025-0288",
-    "case_status": "OPEN",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "PETIT THEFT",
-    "time": "Fri, 24 Jan 2025 16:45:30 GMT"
-  },
-  {
-    "address": "12121 TECHNOLOGY PKWY",
-    "case_number": "2024-10666",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "THEFT FROM BUILDING",
-    "time": "Fri, 27 Dec 2024 13:13:13 GMT"
-  },
-  {
-    "address": "4333 APOLLO DR",
-    "case_number": "2025-0955",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "BURGLARY OF CONVEYANCE",
-    "time": "Tue, 01 Apr 2025 04:32:10 GMT"
-  },
-  {
-    "address": "4133 PICTOR LN",
-    "case_number": "2024-7888",
-    "case_status": "OPEN",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "CRIMINAL MISCHIEF / VANDALISM",
-    "time": "Fri, 16 Aug 2024 22:44:33 GMT"
-  },
-  {
-    "address": "12111 CHALLENGER PKWY",
-    "case_number": "2025-1666",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "POSSESSION OF ALCOHOL (UNDER 21)",
-    "time": "Fri, 23 May 2025 23:23:23 GMT"
-  },
-  {
-    "address": "4433 LIBRA DR",
-    "case_number": "2024-7444",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "TRESPASSING",
-    "time": "Sat, 03 Aug 2024 18:18:18 GMT"
-  },
-  {
-    "address": "3833 AQUARIUS AGORA DR",
-    "case_number": "2025-2450",
-    "case_status": "OPEN",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "PETIT THEFT",
-    "time": "Thu, 26 Jun 2025 11:45:00 GMT"
-  },
-  {
-    "address": "12411 UNIVERSITY BLVD",
-    "case_number": "2025-0333",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "DISORDERLY CONDUCT",
-    "time": "Mon, 27 Jan 2025 02:02:02 GMT"
-  },
-  {
-    "address": "4588 GEMINI BLVD E",
-    "case_number": "2024-9555",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "THEFT FROM BUILDING",
-    "time": "Sun, 10 Nov 2024 14:14:14 GMT"
-  },
-  {
-    "address": "12777 PEGASUS DR",
-    "case_number": "2025-1333",
-    "case_status": "OPEN",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "STALKING",
-    "time": "Sun, 27 Apr 2025 19:19:19 GMT"
-  },
-  {
-    "address": "4144 ORION BLVD N",
-    "case_number": "2025-0199",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "POSSESSION OF CANNABIS < 20G",
-    "time": "Mon, 13 Jan 2025 20:30:00 GMT"
-  },
-  {
-    "address": "4044 CENTRAL FLORIDA BLVD",
-    "case_number": "2024-10222",
-    "case_status": "OPEN",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "TRAFFIC OFFENSE",
-    "time": "Wed, 04 Dec 2024 07:07:07 GMT"
-  },
-  {
-    "address": "12511 ALAFYA TRAIL",
-    "case_number": "2025-1555",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "BURGLARY OF CONVEYANCE",
-    "time": "Wed, 14 May 2025 06:06:06 GMT"
-  },
-  {
-    "address": "11911 RESEARCH PKWY",
-    "case_number": "2024-7666",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "PETIT THEFT",
-    "time": "Wed, 07 Aug 2024 15:15:15 GMT"
-  },
-  {
-    "address": "4777 SCORPIO CT",
-    "case_number": "2025-2500",
-    "case_status": "OPEN",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "CRIMINAL MISCHIEF / VANDALISM",
-    "time": "Fri, 27 Jun 2025 17:35:00 GMT"
-  },
-  {
-    "address": "12333 TECHNOLOGY PKWY",
-    "case_number": "2025-0777",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "DISORDERLY CONDUCT",
-    "time": "Sat, 08 Mar 2025 01:55:00 GMT"
-  },
-  {
-    "address": "4343 APOLLO DR",
-    "case_number": "2024-8888",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "POSSESSION OF ALCOHOL (UNDER 21)",
-    "time": "Wed, 25 Sep 2024 23:33:00 GMT"
-  },
-  {
-    "address": "4177 PICTOR LN",
-    "case_number": "2025-1111",
-    "case_status": "OPEN",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "TRESPASSING",
-    "time": "Wed, 16 Apr 2025 12:12:12 GMT"
-  },
-  {
-    "address": "12001 CHALLENGER PKWY",
-    "case_number": "2024-11000",
-    "case_status": "CLOSED",
-    "coordinates": null,
-    "danger_level": null,
-    "name": "THEFT FROM BUILDING",
-    "time": "Sun, 29 Dec 2024 14:28:39 GMT"
-  }
+    {
+        "address": "4512 GEMINI BLVD E",
+        "case_number": "2025-1129",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.6045,
+            "longitude": -81.2005
+        },
+        "danger_level": null,
+        "name": "PETIT THEFT",
+        "time": "Wed, 14 May 2025 14:03:17 GMT"
+    },
+    {
+        "address": "12100 UNIVERSITY BLVD",
+        "case_number": "2025-2301",
+        "case_status": "OPEN",
+        "coordinates": {
+            "latitude": 28.601,
+            "longitude": -81.201
+        },
+        "danger_level": null,
+        "name": "BURGLARY OF CONVEYANCE",
+        "time": "Fri, 20 Jun 2025 08:45:00 GMT"
+    },
+    {
+        "address": "4000 CENTRAL FLORIDA BLVD",
+        "case_number": "2024-8843",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.602,
+            "longitude": -81.2
+        },
+        "danger_level": null,
+        "name": "CRIMINAL MISCHIEF / VANDALISM",
+        "time": "Tue, 17 Sep 2024 22:15:30 GMT"
+    },
+    {
+        "address": "12800 PEGASUS DR",
+        "case_number": "2025-0456",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.607,
+            "longitude": -81.197
+        },
+        "danger_level": null,
+        "name": "POSSESSION OF ALCOHOL (UNDER 21)",
+        "time": "Sat, 01 Feb 2025 01:20:11 GMT"
+    },
+    {
+        "address": "4221 ORION BLVD N",
+        "case_number": "2024-9102",
+        "case_status": "OPEN",
+        "coordinates": {
+            "latitude": 28.605,
+            "longitude": -81.198
+        },
+        "danger_level": null,
+        "name": "DISORDERLY CONDUCT",
+        "time": "Mon, 14 Oct 2024 18:33:45 GMT"
+    },
+    {
+        "address": "3910 LOCKSLEY LN",
+        "case_number": "2025-1808",
+        "case_status": "OPEN",
+        "coordinates": {
+            "latitude": 28.595,
+            "longitude": -81.2
+        },
+        "danger_level": null,
+        "name": "PETIT THEFT",
+        "time": "Sat, 28 Jun 2025 21:24:00 GMT"
+    },
+    {
+        "address": "11801 RESEARCH PKWY",
+        "case_number": "2024-7321",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.601,
+            "longitude": -81.208
+        },
+        "danger_level": null,
+        "name": "TRESPASSING",
+        "time": "Sun, 28 Jul 2024 03:05:59 GMT"
+    },
+    {
+        "address": "4800 SCORPIO CT",
+        "case_number": "2025-1599",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.608,
+            "longitude": -81.203
+        },
+        "danger_level": null,
+        "name": "THEFT FROM BUILDING",
+        "time": "Thu, 22 May 2025 11:55:02 GMT"
+    },
+    {
+        "address": "12201 TECHNOLOGY PKWY",
+        "case_number": "2024-9987",
+        "case_status": "OPEN",
+        "coordinates": {
+            "latitude": 28.606,
+            "longitude": -81.206
+        },
+        "danger_level": null,
+        "name": "BURGLARY OF CONVEYANCE",
+        "time": "Wed, 27 Nov 2024 06:10:38 GMT"
+    },
+    {
+        "address": "4300 APOLLO DR",
+        "case_number": "2025-0012",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.608,
+            "longitude": -81.199
+        },
+        "danger_level": null,
+        "name": "POSSESSION OF CANNABIS < 20G",
+        "time": "Wed, 01 Jan 2025 20:00:00 GMT"
+    },
+    {
+        "address": "12500 ALAFYA TRAIL",
+        "case_number": "2025-1988",
+        "case_status": "OPEN",
+        "coordinates": {
+            "latitude": 28.592,
+            "longitude": -81.201
+        },
+        "danger_level": null,
+        "name": "STALKING",
+        "time": "Tue, 10 Jun 2025 13:21:44 GMT"
+    },
+    {
+        "address": "4111 PICTOR LN",
+        "case_number": "2024-6999",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.604,
+            "longitude": -81.203
+        },
+        "danger_level": null,
+        "name": "PETIT THEFT",
+        "time": "Fri, 12 Jul 2024 16:40:19 GMT"
+    },
+    {
+        "address": "12000 CHALLENGER PKWY",
+        "case_number": "2025-0823",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.59,
+            "longitude": -81.206
+        },
+        "danger_level": null,
+        "name": "TRAFFIC OFFENSE",
+        "time": "Mon, 10 Mar 2025 09:05:12 GMT"
+    },
+    {
+        "address": "4401 LIBRA DR",
+        "case_number": "2024-10521",
+        "case_status": "OPEN",
+        "coordinates": {
+            "latitude": 28.604,
+            "longitude": -81.196
+        },
+        "danger_level": null,
+        "name": "CRIMINAL MISCHIEF / VANDALISM",
+        "time": "Sat, 21 Dec 2024 23:50:00 GMT"
+    },
+    {
+        "address": "3800 AQUARIUS AGORA DR",
+        "case_number": "2025-0210",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.597,
+            "longitude": -81.197
+        },
+        "danger_level": null,
+        "name": "DISORDERLY CONDUCT",
+        "time": "Sun, 19 Jan 2025 02:30:47 GMT"
+    },
+    {
+        "address": "12345 UNIVERSITY BLVD",
+        "case_number": "2024-8150",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.601,
+            "longitude": -81.206
+        },
+        "danger_level": null,
+        "name": "PETIT THEFT",
+        "time": "Tue, 27 Aug 2024 15:11:34 GMT"
+    },
+    {
+        "address": "4600 GEMINI BLVD S",
+        "case_number": "2025-1345",
+        "case_status": "OPEN",
+        "coordinates": {
+            "latitude": 28.599,
+            "longitude": -81.2005
+        },
+        "danger_level": null,
+        "name": "BURGLARY OF CONVEYANCE",
+        "time": "Wed, 30 Apr 2025 04:56:10 GMT"
+    },
+    {
+        "address": "12900 PEGASUS DR",
+        "case_number": "2024-9532",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.608,
+            "longitude": -81.196
+        },
+        "danger_level": null,
+        "name": "POSSESSION OF ALCOHOL (UNDER 21)",
+        "time": "Fri, 08 Nov 2024 23:12:05 GMT"
+    },
+    {
+        "address": "4250 ORION BLVD N",
+        "case_number": "2025-0789",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.606,
+            "longitude": -81.198
+        },
+        "danger_level": null,
+        "name": "THEFT FROM BUILDING",
+        "time": "Sat, 08 Mar 2025 19:22:51 GMT"
+    },
+    {
+        "address": "4055 CENTRAL FLORIDA BLVD",
+        "case_number": "2024-10111",
+        "case_status": "OPEN",
+        "coordinates": {
+            "latitude": 28.602,
+            "longitude": -81.201
+        },
+        "danger_level": null,
+        "name": "TRESPASSING",
+        "time": "Mon, 02 Dec 2024 12:00:00 GMT"
+    },
+    {
+        "address": "12650 ALAFYA TRAIL",
+        "case_number": "2025-2112",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.595,
+            "longitude": -81.201
+        },
+        "danger_level": null,
+        "name": "CRIMINAL MISCHIEF / VANDALISM",
+        "time": "Sun, 15 Jun 2025 18:48:22 GMT"
+    },
+    {
+        "address": "11900 RESEARCH PKWY",
+        "case_number": "2025-0155",
+        "case_status": "OPEN",
+        "coordinates": {
+            "latitude": 28.602,
+            "longitude": -81.208
+        },
+        "danger_level": null,
+        "name": "POSSESSION OF CANNABIS < 20G",
+        "time": "Fri, 10 Jan 2025 21:33:14 GMT"
+    },
+    {
+        "address": "4750 SCORPIO CT",
+        "case_number": "2024-8345",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.607,
+            "longitude": -81.203
+        },
+        "danger_level": null,
+        "name": "PETIT THEFT",
+        "time": "Wed, 04 Sep 2024 10:25:00 GMT"
+    },
+    {
+        "address": "12255 TECHNOLOGY PKWY",
+        "case_number": "2025-1492",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.607,
+            "longitude": -81.206
+        },
+        "danger_level": null,
+        "name": "BURGLARY OF CONVEYANCE",
+        "time": "Tue, 13 May 2025 07:18:36 GMT"
+    },
+    {
+        "address": "4350 APOLLO DR",
+        "case_number": "2024-9210",
+        "case_status": "OPEN",
+        "coordinates": {
+            "latitude": 28.609,
+            "longitude": -81.199
+        },
+        "danger_level": null,
+        "name": "STALKING",
+        "time": "Sun, 20 Oct 2024 11:30:15 GMT"
+    },
+    {
+        "address": "4150 PICTOR LN",
+        "case_number": "2025-2400",
+        "case_status": "OPEN",
+        "coordinates": {
+            "latitude": 28.605,
+            "longitude": -81.203
+        },
+        "danger_level": null,
+        "name": "DISORDERLY CONDUCT",
+        "time": "Wed, 25 Jun 2025 00:50:29 GMT"
+    },
+    {
+        "address": "12150 CHALLENGER PKWY",
+        "case_number": "2024-7543",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.591,
+            "longitude": -81.207
+        },
+        "danger_level": null,
+        "name": "TRAFFIC OFFENSE",
+        "time": "Mon, 05 Aug 2024 17:01:53 GMT"
+    },
+    {
+        "address": "4444 LIBRA DR",
+        "case_number": "2025-0555",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.605,
+            "longitude": -81.196
+        },
+        "danger_level": null,
+        "name": "THEFT FROM BUILDING",
+        "time": "Thu, 13 Feb 2025 14:44:44 GMT"
+    },
+    {
+        "address": "3850 AQUARIUS AGORA DR",
+        "case_number": "2024-10888",
+        "case_status": "OPEN",
+        "coordinates": {
+            "latitude": 28.598,
+            "longitude": -81.197
+        },
+        "danger_level": null,
+        "name": "PETIT THEFT",
+        "time": "Tue, 31 Dec 2024 20:10:30 GMT"
+    },
+    {
+        "address": "12400 UNIVERSITY BLVD",
+        "case_number": "2025-1678",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.601,
+            "longitude": -81.208
+        },
+        "danger_level": null,
+        "name": "CRIMINAL MISCHIEF / VANDALISM",
+        "time": "Sat, 24 May 2025 21:05:18 GMT"
+    },
+    {
+        "address": "4550 GEMINI BLVD E",
+        "case_number": "2024-8765",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.605,
+            "longitude": -81.2005
+        },
+        "danger_level": null,
+        "name": "BURGLARY OF CONVEYANCE",
+        "time": "Fri, 20 Sep 2024 02:20:45 GMT"
+    },
+    {
+        "address": "12750 PEGASUS DR",
+        "case_number": "2025-0321",
+        "case_status": "OPEN",
+        "coordinates": {
+            "latitude": 28.606,
+            "longitude": -81.197
+        },
+        "danger_level": null,
+        "name": "POSSESSION OF ALCOHOL (UNDER 21)",
+        "time": "Wed, 29 Jan 2025 22:45:00 GMT"
+    },
+    {
+        "address": "4190 ORION BLVD N",
+        "case_number": "2024-9400",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.604,
+            "longitude": -81.198
+        },
+        "danger_level": null,
+        "name": "TRESPASSING",
+        "time": "Wed, 30 Oct 2024 14:00:19 GMT"
+    },
+    {
+        "address": "4088 CENTRAL FLORIDA BLVD",
+        "case_number": "2025-2001",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.602,
+            "longitude": -81.202
+        },
+        "danger_level": null,
+        "name": "PETIT THEFT",
+        "time": "Fri, 13 Jun 2025 12:34:56 GMT"
+    },
+    {
+        "address": "12555 ALAFYA TRAIL",
+        "case_number": "2025-0690",
+        "case_status": "OPEN",
+        "coordinates": {
+            "latitude": 28.593,
+            "longitude": -81.201
+        },
+        "danger_level": null,
+        "name": "DISORDERLY CONDUCT",
+        "time": "Sun, 23 Feb 2025 03:15:22 GMT"
+    },
+    {
+        "address": "11950 RESEARCH PKWY",
+        "case_number": "2024-7890",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.603,
+            "longitude": -81.208
+        },
+        "danger_level": null,
+        "name": "POSSESSION OF CANNABIS < 20G",
+        "time": "Sat, 17 Aug 2024 23:40:11 GMT"
+    },
+    {
+        "address": "4711 SCORPIO CT",
+        "case_number": "2025-1730",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.606,
+            "longitude": -81.203
+        },
+        "danger_level": null,
+        "name": "THEFT FROM BUILDING",
+        "time": "Mon, 26 May 2025 10:10:10 GMT"
+    },
+    {
+        "address": "12301 TECHNOLOGY PKWY",
+        "case_number": "2025-0099",
+        "case_status": "OPEN",
+        "coordinates": {
+            "latitude": 28.608,
+            "longitude": -81.206
+        },
+        "danger_level": null,
+        "name": "STALKING",
+        "time": "Tue, 07 Jan 2025 18:00:21 GMT"
+    },
+    {
+        "address": "4380 APOLLO DR",
+        "case_number": "2024-10400",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.61,
+            "longitude": -81.199
+        },
+        "danger_level": null,
+        "name": "TRAFFIC OFFENSE",
+        "time": "Wed, 18 Dec 2024 08:30:00 GMT"
+    },
+    {
+        "address": "4180 PICTOR LN",
+        "case_number": "2025-1010",
+        "case_status": "OPEN",
+        "coordinates": {
+            "latitude": 28.606,
+            "longitude": -81.203
+        },
+        "danger_level": null,
+        "name": "PETIT THEFT",
+        "time": "Mon, 07 Apr 2025 13:00:00 GMT"
+    },
+    {
+        "address": "12222 CHALLENGER PKWY",
+        "case_number": "2024-8500",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.592,
+            "longitude": -81.207
+        },
+        "danger_level": null,
+        "name": "BURGLARY OF CONVEYANCE",
+        "time": "Sun, 08 Sep 2024 22:22:22 GMT"
+    },
+    {
+        "address": "4420 LIBRA DR",
+        "case_number": "2025-2250",
+        "case_status": "OPEN",
+        "coordinates": {
+            "latitude": 28.604,
+            "longitude": -81.195
+        },
+        "danger_level": null,
+        "name": "CRIMINAL MISCHIEF / VANDALISM",
+        "time": "Mon, 16 Jun 2025 09:15:33 GMT"
+    },
+    {
+        "address": "3880 AQUARIUS AGORA DR",
+        "case_number": "2025-0411",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.599,
+            "longitude": -81.197
+        },
+        "danger_level": null,
+        "name": "POSSESSION OF ALCOHOL (UNDER 21)",
+        "time": "Sat, 01 Feb 2025 00:30:00 GMT"
+    },
+    {
+        "address": "12300 UNIVERSITY BLVD",
+        "case_number": "2024-9777",
+        "case_status": "OPEN",
+        "coordinates": {
+            "latitude": 28.601,
+            "longitude": -81.204
+        },
+        "danger_level": null,
+        "name": "TRESPASSING",
+        "time": "Sat, 16 Nov 2024 19:45:00 GMT"
+    },
+    {
+        "address": "4655 GEMINI BLVD S",
+        "case_number": "2025-1234",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.6,
+            "longitude": -81.2005
+        },
+        "danger_level": null,
+        "name": "PETIT THEFT",
+        "time": "Tue, 22 Apr 2025 17:21:54 GMT"
+    },
+    {
+        "address": "12888 PEGASUS DR",
+        "case_number": "2024-7001",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.607,
+            "longitude": -81.196
+        },
+        "danger_level": null,
+        "name": "THEFT FROM BUILDING",
+        "time": "Sat, 13 Jul 2024 11:11:11 GMT"
+    },
+    {
+        "address": "4288 ORION BLVD N",
+        "case_number": "2025-2389",
+        "case_status": "OPEN",
+        "coordinates": {
+            "latitude": 28.607,
+            "longitude": -81.198
+        },
+        "danger_level": null,
+        "name": "DISORDERLY CONDUCT",
+        "time": "Tue, 24 Jun 2025 23:59:59 GMT"
+    },
+    {
+        "address": "4100 CENTRAL FLORIDA BLVD",
+        "case_number": "2025-0600",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.602,
+            "longitude": -81.203
+        },
+        "danger_level": null,
+        "name": "BURGLARY OF CONVEYANCE",
+        "time": "Tue, 18 Feb 2025 01:01:01 GMT"
+    },
+    {
+        "address": "12601 ALAFYA TRAIL",
+        "case_number": "2024-8999",
+        "case_status": "OPEN",
+        "coordinates": {
+            "latitude": 28.594,
+            "longitude": -81.201
+        },
+        "danger_level": null,
+        "name": "CRIMINAL MISCHIEF / VANDALISM",
+        "time": "Mon, 23 Sep 2024 20:20:20 GMT"
+    },
+    {
+        "address": "11850 RESEARCH PKWY",
+        "case_number": "2025-1900",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.601,
+            "longitude": -81.209
+        },
+        "danger_level": null,
+        "name": "POSSESSION OF CANNABIS < 20G",
+        "time": "Sat, 07 Jun 2025 16:50:30 GMT"
+    },
+    {
+        "address": "4810 SCORPIO CT",
+        "case_number": "2025-0250",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.609,
+            "longitude": -81.203
+        },
+        "danger_level": null,
+        "name": "STALKING",
+        "time": "Wed, 22 Jan 2025 08:00:00 GMT"
+    },
+    {
+        "address": "12199 TECHNOLOGY PKWY",
+        "case_number": "2024-10753",
+        "case_status": "OPEN",
+        "coordinates": {
+            "latitude": 28.605,
+            "longitude": -81.206
+        },
+        "danger_level": null,
+        "name": "TRAFFIC OFFENSE",
+        "time": "Sun, 29 Dec 2024 15:15:15 GMT"
+    },
+    {
+        "address": "4321 APOLLO DR",
+        "case_number": "2025-0888",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.608,
+            "longitude": -81.2
+        },
+        "danger_level": null,
+        "name": "PETIT THEFT",
+        "time": "Fri, 21 Mar 2025 18:30:00 GMT"
+    },
+    {
+        "address": "4123 PICTOR LN",
+        "case_number": "2024-8001",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.604,
+            "longitude": -81.204
+        },
+        "danger_level": null,
+        "name": "THEFT FROM BUILDING",
+        "time": "Wed, 21 Aug 2024 12:45:00 GMT"
+    },
+    {
+        "address": "12050 CHALLENGER PKWY",
+        "case_number": "2025-2150",
+        "case_status": "OPEN",
+        "coordinates": {
+            "latitude": 28.59,
+            "longitude": -81.207
+        },
+        "danger_level": null,
+        "name": "BURGLARY OF CONVEYANCE",
+        "time": "Sat, 14 Jun 2025 05:30:10 GMT"
+    },
+    {
+        "address": "4488 LIBRA DR",
+        "case_number": "2025-0399",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.606,
+            "longitude": -81.196
+        },
+        "danger_level": null,
+        "name": "POSSESSION OF ALCOHOL (UNDER 21)",
+        "time": "Fri, 31 Jan 2025 23:59:00 GMT"
+    },
+    {
+        "address": "3810 AQUARIUS AGORA DR",
+        "case_number": "2024-9669",
+        "case_status": "OPEN",
+        "coordinates": {
+            "latitude": 28.597,
+            "longitude": -81.198
+        },
+        "danger_level": null,
+        "name": "TRESPASSING",
+        "time": "Wed, 13 Nov 2024 10:00:00 GMT"
+    },
+    {
+        "address": "12344 UNIVERSITY BLVD",
+        "case_number": "2025-1199",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.601,
+            "longitude": -81.205
+        },
+        "danger_level": null,
+        "name": "DISORDERLY CONDUCT",
+        "time": "Sun, 18 May 2025 02:45:00 GMT"
+    },
+    {
+        "address": "4699 GEMINI BLVD S",
+        "case_number": "2024-7123",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.601,
+            "longitude": -81.2005
+        },
+        "danger_level": null,
+        "name": "CRIMINAL MISCHIEF / VANDALISM",
+        "time": "Mon, 15 Jul 2024 21:30:00 GMT"
+    },
+    {
+        "address": "12950 PEGASUS DR",
+        "case_number": "2025-1850",
+        "case_status": "OPEN",
+        "coordinates": {
+            "latitude": 28.609,
+            "longitude": -81.196
+        },
+        "danger_level": null,
+        "name": "PETIT THEFT",
+        "time": "Wed, 04 Jun 2025 14:20:15 GMT"
+    },
+    {
+        "address": "4210 ORION BLVD N",
+        "case_number": "2025-0500",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.604,
+            "longitude": -81.197
+        },
+        "danger_level": null,
+        "name": "THEFT FROM BUILDING",
+        "time": "Sat, 08 Feb 2025 13:13:13 GMT"
+    },
+    {
+        "address": "4150 CENTRAL FLORIDA BLVD",
+        "case_number": "2024-9888",
+        "case_status": "OPEN",
+        "coordinates": {
+            "latitude": 28.602,
+            "longitude": -81.204
+        },
+        "danger_level": null,
+        "name": "STALKING",
+        "time": "Tue, 19 Nov 2024 09:09:09 GMT"
+    },
+    {
+        "address": "12700 ALAFYA TRAIL",
+        "case_number": "2025-0750",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.596,
+            "longitude": -81.201
+        },
+        "danger_level": null,
+        "name": "POSSESSION OF CANNABIS < 20G",
+        "time": "Wed, 05 Mar 2025 22:00:00 GMT"
+    },
+    {
+        "address": "11789 RESEARCH PKWY",
+        "case_number": "2024-8200",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.6,
+            "longitude": -81.208
+        },
+        "danger_level": null,
+        "name": "TRAFFIC OFFENSE",
+        "time": "Fri, 30 Aug 2024 16:16:16 GMT"
+    },
+    {
+        "address": "4888 SCORPIO CT",
+        "case_number": "2025-2333",
+        "case_status": "OPEN",
+        "coordinates": {
+            "latitude": 28.61,
+            "longitude": -81.203
+        },
+        "danger_level": null,
+        "name": "BURGLARY OF CONVEYANCE",
+        "time": "Sun, 22 Jun 2025 04:44:44 GMT"
+    },
+    {
+        "address": "12051 TECHNOLOGY PKWY",
+        "case_number": "2025-0111",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.604,
+            "longitude": -81.205
+        },
+        "danger_level": null,
+        "name": "PETIT THEFT",
+        "time": "Thu, 09 Jan 2025 11:33:11 GMT"
+    },
+    {
+        "address": "4399 APOLLO DR",
+        "case_number": "2024-10999",
+        "case_status": "OPEN",
+        "coordinates": {
+            "latitude": 28.611,
+            "longitude": -81.199
+        },
+        "danger_level": null,
+        "name": "CRIMINAL MISCHIEF / VANDALISM",
+        "time": "Tue, 31 Dec 2024 23:58:00 GMT"
+    },
+    {
+        "address": "4199 PICTOR LN",
+        "case_number": "2025-1099",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.607,
+            "longitude": -81.203
+        },
+        "danger_level": null,
+        "name": "DISORDERLY CONDUCT",
+        "time": "Sat, 12 Apr 2025 01:23:45 GMT"
+    },
+    {
+        "address": "12250 CHALLENGER PKWY",
+        "case_number": "2024-8654",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.593,
+            "longitude": -81.207
+        },
+        "danger_level": null,
+        "name": "POSSESSION OF ALCOHOL (UNDER 21)",
+        "time": "Tue, 17 Sep 2024 23:00:00 GMT"
+    },
+    {
+        "address": "4450 LIBRA DR",
+        "case_number": "2025-1777",
+        "case_status": "OPEN",
+        "coordinates": {
+            "latitude": 28.605,
+            "longitude": -81.195
+        },
+        "danger_level": null,
+        "name": "TRESPASSING",
+        "time": "Wed, 28 May 2025 15:55:55 GMT"
+    },
+    {
+        "address": "3890 AQUARIUS AGORA DR",
+        "case_number": "2024-7222",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.599,
+            "longitude": -81.198
+        },
+        "danger_level": null,
+        "name": "THEFT FROM BUILDING",
+        "time": "Wed, 17 Jul 2024 10:30:00 GMT"
+    },
+    {
+        "address": "12388 UNIVERSITY BLVD",
+        "case_number": "2025-0420",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.601,
+            "longitude": -81.207
+        },
+        "danger_level": null,
+        "name": "PETIT THEFT",
+        "time": "Sun, 02 Feb 2025 19:00:00 GMT"
+    },
+    {
+        "address": "4621 GEMINI BLVD S",
+        "case_number": "2025-1444",
+        "case_status": "OPEN",
+        "coordinates": {
+            "latitude": 28.599,
+            "longitude": -81.201
+        },
+        "danger_level": null,
+        "name": "BURGLARY OF CONVEYANCE",
+        "time": "Fri, 09 May 2025 03:03:03 GMT"
+    },
+    {
+        "address": "12821 PEGASUS DR",
+        "case_number": "2024-9333",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.607,
+            "longitude": -81.198
+        },
+        "danger_level": null,
+        "name": "CRIMINAL MISCHIEF / VANDALISM",
+        "time": "Sun, 27 Oct 2024 17:17:17 GMT"
+    },
+    {
+        "address": "4266 ORION BLVD N",
+        "case_number": "2025-2222",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.606,
+            "longitude": -81.199
+        },
+        "danger_level": null,
+        "name": "STALKING",
+        "time": "Sun, 15 Jun 2025 22:22:22 GMT"
+    },
+    {
+        "address": "4021 CENTRAL FLORIDA BLVD",
+        "case_number": "2025-0633",
+        "case_status": "OPEN",
+        "coordinates": {
+            "latitude": 28.602,
+            "longitude": -81.199
+        },
+        "danger_level": null,
+        "name": "POSSESSION OF CANNABIS < 20G",
+        "time": "Sat, 22 Feb 2025 21:21:21 GMT"
+    },
+    {
+        "address": "12621 ALAFYA TRAIL",
+        "case_number": "2024-9090",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.594,
+            "longitude": -81.2
+        },
+        "danger_level": null,
+        "name": "TRAFFIC OFFENSE",
+        "time": "Thu, 26 Sep 2024 08:08:08 GMT"
+    },
+    {
+        "address": "11821 RESEARCH PKWY",
+        "case_number": "2025-2020",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.601,
+            "longitude": -81.209
+        },
+        "danger_level": null,
+        "name": "DISORDERLY CONDUCT",
+        "time": "Sun, 08 Jun 2025 01:01:01 GMT"
+    },
+    {
+        "address": "4821 SCORPIO CT",
+        "case_number": "2025-0288",
+        "case_status": "OPEN",
+        "coordinates": {
+            "latitude": 28.609,
+            "longitude": -81.204
+        },
+        "danger_level": null,
+        "name": "PETIT THEFT",
+        "time": "Fri, 24 Jan 2025 16:45:30 GMT"
+    },
+    {
+        "address": "12121 TECHNOLOGY PKWY",
+        "case_number": "2024-10666",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.604,
+            "longitude": -81.206
+        },
+        "danger_level": null,
+        "name": "THEFT FROM BUILDING",
+        "time": "Fri, 27 Dec 2024 13:13:13 GMT"
+    },
+    {
+        "address": "4333 APOLLO DR",
+        "case_number": "2025-0955",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.609,
+            "longitude": -81.2
+        },
+        "danger_level": null,
+        "name": "BURGLARY OF CONVEYANCE",
+        "time": "Tue, 01 Apr 2025 04:32:10 GMT"
+    },
+    {
+        "address": "4133 PICTOR LN",
+        "case_number": "2024-7888",
+        "case_status": "OPEN",
+        "coordinates": {
+            "latitude": 28.605,
+            "longitude": -81.204
+        },
+        "danger_level": null,
+        "name": "CRIMINAL MISCHIEF / VANDALISM",
+        "time": "Fri, 16 Aug 2024 22:44:33 GMT"
+    },
+    {
+        "address": "12111 CHALLENGER PKWY",
+        "case_number": "2025-1666",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.591,
+            "longitude": -81.206
+        },
+        "danger_level": null,
+        "name": "POSSESSION OF ALCOHOL (UNDER 21)",
+        "time": "Fri, 23 May 2025 23:23:23 GMT"
+    },
+    {
+        "address": "4433 LIBRA DR",
+        "case_number": "2024-7444",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.604,
+            "longitude": -81.194
+        },
+        "danger_level": null,
+        "name": "TRESPASSING",
+        "time": "Sat, 03 Aug 2024 18:18:18 GMT"
+    },
+    {
+        "address": "3833 AQUARIUS AGORA DR",
+        "case_number": "2025-2450",
+        "case_status": "OPEN",
+        "coordinates": {
+            "latitude": 28.598,
+            "longitude": -81.198
+        },
+        "danger_level": null,
+        "name": "PETIT THEFT",
+        "time": "Thu, 26 Jun 2025 11:45:00 GMT"
+    },
+    {
+        "address": "12411 UNIVERSITY BLVD",
+        "case_number": "2025-0333",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.601,
+            "longitude": -81.209
+        },
+        "danger_level": null,
+        "name": "DISORDERLY CONDUCT",
+        "time": "Mon, 27 Jan 2025 02:02:02 GMT"
+    },
+    {
+        "address": "4588 GEMINI BLVD E",
+        "case_number": "2024-9555",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.606,
+            "longitude": -81.2005
+        },
+        "danger_level": null,
+        "name": "THEFT FROM BUILDING",
+        "time": "Sun, 10 Nov 2024 14:14:14 GMT"
+    },
+    {
+        "address": "12777 PEGASUS DR",
+        "case_number": "2025-1333",
+        "case_status": "OPEN",
+        "coordinates": {
+            "latitude": 28.606,
+            "longitude": -81.198
+        },
+        "danger_level": null,
+        "name": "STALKING",
+        "time": "Sun, 27 Apr 2025 19:19:19 GMT"
+    },
+    {
+        "address": "4144 ORION BLVD N",
+        "case_number": "2025-0199",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.603,
+            "longitude": -81.197
+        },
+        "danger_level": null,
+        "name": "POSSESSION OF CANNABIS < 20G",
+        "time": "Mon, 13 Jan 2025 20:30:00 GMT"
+    },
+    {
+        "address": "4044 CENTRAL FLORIDA BLVD",
+        "case_number": "2024-10222",
+        "case_status": "OPEN",
+        "coordinates": {
+            "latitude": 28.602,
+            "longitude": -81.2
+        },
+        "danger_level": null,
+        "name": "TRAFFIC OFFENSE",
+        "time": "Wed, 04 Dec 2024 07:07:07 GMT"
+    },
+    {
+        "address": "12511 ALAFYA TRAIL",
+        "case_number": "2025-1555",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.592,
+            "longitude": -81.2
+        },
+        "danger_level": null,
+        "name": "BURGLARY OF CONVEYANCE",
+        "time": "Wed, 14 May 2025 06:06:06 GMT"
+    },
+    {
+        "address": "11911 RESEARCH PKWY",
+        "case_number": "2024-7666",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.602,
+            "longitude": -81.209
+        },
+        "danger_level": null,
+        "name": "PETIT THEFT",
+        "time": "Wed, 07 Aug 2024 15:15:15 GMT"
+    },
+    {
+        "address": "4777 SCORPIO CT",
+        "case_number": "2025-2500",
+        "case_status": "OPEN",
+        "coordinates": {
+            "latitude": 28.608,
+            "longitude": -81.202
+        },
+        "danger_level": null,
+        "name": "CRIMINAL MISCHIEF / VANDALISM",
+        "time": "Fri, 27 Jun 2025 17:35:00 GMT"
+    },
+    {
+        "address": "12333 TECHNOLOGY PKWY",
+        "case_number": "2025-0777",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.608,
+            "longitude": -81.207
+        },
+        "danger_level": null,
+        "name": "DISORDERLY CONDUCT",
+        "time": "Sat, 08 Mar 2025 01:55:00 GMT"
+    },
+    {
+        "address": "4343 APOLLO DR",
+        "case_number": "2024-8888",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.609,
+            "longitude": -81.2
+        },
+        "danger_level": null,
+        "name": "POSSESSION OF ALCOHOL (UNDER 21)",
+        "time": "Wed, 25 Sep 2024 23:33:00 GMT"
+    },
+    {
+        "address": "4177 PICTOR LN",
+        "case_number": "2025-1111",
+        "case_status": "OPEN",
+        "coordinates": {
+            "latitude": 28.606,
+            "longitude": -81.204
+        },
+        "danger_level": null,
+        "name": "TRESPASSING",
+        "time": "Wed, 16 Apr 2025 12:12:12 GMT"
+    },
+    {
+        "address": "12001 CHALLENGER PKWY",
+        "case_number": "2024-11000",
+        "case_status": "CLOSED",
+        "coordinates": {
+            "latitude": 28.589,
+            "longitude": -81.206
+        },
+        "danger_level": null,
+        "name": "THEFT FROM BUILDING",
+        "time": "Sun, 29 Dec 2024 14:28:39 GMT"
+    }
 ]
