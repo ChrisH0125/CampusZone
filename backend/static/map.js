@@ -17,7 +17,49 @@ var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest
 });
 Esri_WorldImagery.addTo(map);
 
-// 3. Get user's current location and center map
+// 3. Load crime data and add circle markers
+async function loadCrimeData() {
+  try {
+    const response = await fetch('/data.json');
+    const crimeData = await response.json();
+    
+    // Add circle markers for each crime
+    crimeData.forEach(crime => {
+      // Skip if coordinates are missing
+      if (!crime.coordinates || !crime.coordinates.latitude || !crime.coordinates.longitude) {
+        return;
+      }
+      
+      // Calculate radius based on danger_level (0-1 scale)
+      // Scale: 50-200 pixels based on danger level
+      const radius = 50 + (crime.danger_level * 150);
+      
+      // Determine color based on danger_level
+      let color;
+      if (crime.danger_level <= 0.33) {
+        color = '#00FF00'; // green for low danger
+      } else if (crime.danger_level <= 0.66) {
+        color = '#FFFF00'; // yellow for medium danger
+      } else {
+        color = '#FF0000'; // red for high danger
+      }
+      
+      // Create circle marker
+      L.circle([crime.coordinates.latitude, crime.coordinates.longitude], {
+        color: color,
+        fillColor: color,
+        fillOpacity: 0.2,
+        radius: radius,
+        weight: 1
+      }).addTo(map);
+    });
+    
+  } catch (error) {
+    console.error('Error loading crime data:', error);
+  }
+}
+
+// 4. Get user's current location and center map
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(
     function(position) {
@@ -32,6 +74,9 @@ if (navigator.geolocation) {
         .addTo(map)
         .bindPopup("You are here!")
         .openPopup();
+      
+      // Load crime data after setting location
+      loadCrimeData();
     },
     function(error) {
       console.log("Geolocation error:", error);
@@ -40,6 +85,9 @@ if (navigator.geolocation) {
         .addTo(map)
         .bindPopup("Default location: Orlando, FL")
         .openPopup();
+      
+      // Load crime data even on error
+      loadCrimeData();
     }
   );
 } else {
@@ -49,4 +97,7 @@ if (navigator.geolocation) {
     .addTo(map)
     .bindPopup("Default location: Orlando, FL")
     .openPopup();
+  
+  // Load crime data
+  loadCrimeData();
 }
